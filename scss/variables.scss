@@ -1,0 +1,29 @@
+$MyriadProRegular: 'MyriadPro-Regular';
+$AnimeRegular: 'AnimeAcev05';
+
+$minWidth: 1200px;
+
+$regularFS: 16px;
+$regularFLH: 31px;
+$smallFS: 13px;
+
+$wrapperVal: 2.5%;
+$wrapperValMob: 4%;
+
+$regularColor: #111010;
+$greyColor: rgba(0,0,0, .4);
+$borderColor: rgba(0,0,0, .1);
+$linkColor: #FF4141;
+$linkColorHover: rgba(255,65,65, .8);
+
+
+
+// placeholder
+@mixin placeholder ($color, $ff, $selector)
+{
+  $selector: unquote($selector);
+  #{$selector}::-webkit-input-placeholder{color: $color; font-family: $ff;}
+  #{$selector}:-moz-placeholder{color: $color; font-family: $ff;}
+  #{$selector}::-moz-placeholder{color: $color; font-family: $ff;}
+  #{$selector}:-ms-input-placeholder{color: $color; font-family: $ff;}
+}

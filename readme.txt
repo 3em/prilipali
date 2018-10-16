@@ -1,0 +1,1 @@
+sass --watch /artutkin/projects/prilipala/scss/common.scss://artutkin/projects/prilipala/css/common.css
