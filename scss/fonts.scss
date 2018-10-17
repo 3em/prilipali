@@ -20,4 +20,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'DigitalStripCyrillic';
+  src: url('../fonts/DigitalStripCyrillic.eot');
+  src: url('../fonts/DigitalStripCyrillic.woff2') format('woff2'),
+  url('../fonts/DigitalStripCyrillic.woff') format('woff'),
+  url('../fonts/DigitalStripCyrillic.svg#DigitalStripCyrillic') format('svg'),
+  url('../fonts/DigitalStripCyrillic.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 

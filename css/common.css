@@ -201,6 +201,95 @@ a:active, a:focus, button:active, button:focus {
   src: url("../fonts/anime-ace-v05.woff2") format("woff2"), url("../fonts/AnimeAcev05.woff") format("woff"), url("../fonts/AnimeAcev05.svg#AnimeAcev05") format("svg"), url("../fonts/anime-ace-v05.eot?#iefix") format("embedded-opentype");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: 'DigitalStripCyrillic';
+  src: url("../fonts/DigitalStripCyrillic.eot");
+  src: url("../fonts/DigitalStripCyrillic.woff2") format("woff2"), url("../fonts/DigitalStripCyrillic.woff") format("woff"), url("../fonts/DigitalStripCyrillic.svg#DigitalStripCyrillic") format("svg"), url("../fonts/DigitalStripCyrillic.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+@keyframes hero1Move {
+  0% {
+    opacity: 1;
+    transform: translate(-150%, 50%) scale(0.3); }
+  40% {
+    opacity: 1;
+    transform: translate(25%, 0) scale(0.6); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1); } }
+@keyframes hero1Move_mob {
+  0% {
+    opacity: 1;
+    transform: translate(150%, 0%) scale(0.3) rotateY(180deg); }
+  40% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(0.6) rotateY(180deg); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotateY(180deg); } }
+@keyframes hero2Move {
+  0% {
+    opacity: 1;
+    transform: translate(-150%, 50%) scale(1); }
+  30% {
+    opacity: 1;
+    transform: translate(5%, 0) scale(1.1); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1); } }
+@keyframes hero3Move {
+  0% {
+    opacity: 0;
+    transform: translate(0, 30%); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+@keyframes hero4Move {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  40% {
+    opacity: 1;
+    transform: scale(1.1); }
+  60% {
+    opacity: 1;
+    transform: scale(1); }
+  80% {
+    opacity: 1;
+    transform: scale(1.05); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+@keyframes hero5Move {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+@keyframes loaderLogo {
+  0% {
+    transform: translate(-50%, -50%) scale(1); }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1); }
+  100% {
+    transform: translate(-50%, -50%) scale(1); } }
+@keyframes dLogo {
+  0% {
+    transform: translate(-250%, -50%) rotate(-180deg); }
+  100% {
+    transform: translate(0, -50%) rotate(0deg); } }
+@keyframes border {
+  0% {
+    box-shadow: 60px -60px 0 1px #fff, -60px -60px 0 1px #fff, -60px 60px 0 1px #fff, 60px 60px 0 1px #fff, 0 0 0 1px #fff; }
+  25% {
+    box-shadow: 0 -125px 0 1px #fff, -60px -60px 0 1px #fff, -60px 60px 0 1px #fff, 60px 60px 0 1px #fff, 0 0 0 1px #e39835; }
+  50% {
+    box-shadow: 0 -125px 0 1px #fff, -125px 0px 0 1px #fff, -60px 60px 0 1px #fff, 60px 60px 0 1px #fff, 0 0 0 1px #e39835; }
+  75% {
+    box-shadow: 0 -125px 0 1px #fff, -125px 0px 0 1px #fff, 0px 125px 0 1px #fff, 60px 60px 0 1px #fff, 0 0 0 1px #e39835; }
+  100% {
+    box-shadow: 0 -125px 0 1px #fff, -125px 0px 0 1px #fff, 0px 125px 0 1px #fff, 120px 40px 0 1px #fff, 0 0 0 1px #e39835; } }
 .u-clear-fix:after {
   content: ".";
   display: block;
@@ -220,7 +309,7 @@ sup {
 
 body {
   position: relative;
-  font-family: "AnimeAcev05";
+  font-family: "DigitalStripCyrillic";
   font-size: 16px;
   line-height: 31px;
   color: #111010;
@@ -233,20 +322,24 @@ body {
     min-height: 100%; }
   body.regular .b-section-top__hero {
     animation: 0 !important;
-    transform: none; }
+    opacity: 1;
+    transform: none;
+    transition: none; }
   body.transitions .b-section-top__hero.b-section-top__hero_1 {
-    transform: translate(-150%, 0) scale(0.3) !important; }
+    opacity: 0;
+    transform: translate(-150%, 0) scale(0.3); }
   body.transitions .b-section-top__hero.b-section-top__hero_2 {
     opacity: 0;
-    transform: translate(-100%, 50%) scale(1) !important; }
+    transform: translate(-100%, 50%) scale(1); }
   body.transitions .b-section-top__hero.b-section-top__hero_3 {
+    transform: translate(30%, 0);
     opacity: 0; }
   body.transitions .b-section-top__hero.b-section-top__hero_4 {
     opacity: 0;
-    transform: scale(0) !important; }
+    transform: scale(0); }
   body.transitions .b-section-top__hero.b-section-top__hero_5 {
     opacity: 0;
-    transform: scale(0) !important; }
+    transform: scale(0); }
   body.show .b-loader {
     opacity: 0;
     visibility: hidden; }
@@ -269,7 +362,7 @@ body {
     animation: hero2Move 1s ease 1 forwards;
     animation-delay: .9s; }
   body.show .b-section-top__hero.b-section-top__hero_3 {
-    animation: hero3Move .4s ease 1 forwards;
+    animation: hero3Move 2.8s ease 1 forwards;
     animation-delay: 1.2s; }
   body.show .b-section-top__hero.b-section-top__hero_4 {
     animation: hero4Move .8s ease 1 forwards;
@@ -302,6 +395,14 @@ a {
   .b-loader.active .b-loader__logo {
     animation: loaderLogo .6s ease 1 forwards;
     animation-delay: .4s; }
+  .b-loader .b-loader__line_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: rotateY(0deg);
+    z-index: 1; }
   .b-loader .b-loader__line {
     overflow: hidden;
     position: absolute;
@@ -312,8 +413,7 @@ a {
     height: 120px;
     border-radius: 50%;
     background: #fff;
-    box-shadow: 60px -60px 0 1px #fff, -60px -60px 0 1px #fff, -60px 60px 0 1px #fff, 60px 60px 0 1px #fff, 0 0 0 1px #fff;
-    z-index: 1; }
+    box-shadow: 60px -60px 0 1px #fff, -60px -60px 0 1px #fff, -60px 60px 0 1px #fff, 60px 60px 0 1px #fff, 0 0 0 1px #fff; }
   .b-loader .b-loader__logo {
     position: absolute;
     top: 50%;
@@ -460,7 +560,8 @@ a {
 
 .b-section-top__hero {
   position: absolute !important;
-  z-index: 4; }
+  z-index: 4;
+  backface-visibility: hidden; }
   .b-section-top__hero.b-section-top__hero_click {
     cursor: pointer;
     transition: transform .15s;
@@ -498,7 +599,7 @@ a {
     bottom: 29%;
     width: 3.72vw;
     height: 6.38vw;
-    background: url("../i/top-hero-3.svg") no-repeat center;
+    background: url("../i/top-hero-3.svg") no-repeat center 40%;
     background-size: 100% auto;
     pointer-events: auto; }
     .b-section-top__hero.b-section-top__hero_3 .b-section-top__hero-cloud {
@@ -598,81 +699,6 @@ a {
   .b-video-wrapper__close:hover {
     transform: scale(1.1); }
 
-@keyframes hero1Move {
-  0% {
-    transform: translate(-150%, 50%) scale(0.3); }
-  40% {
-    transform: translate(25%, 0) scale(0.6); }
-  100% {
-    transform: translate(0, 0) scale(1); } }
-@keyframes hero1Move_mob {
-  0% {
-    transform: translate(150%, 0%) scale(0.3) rotateY(180deg); }
-  40% {
-    transform: translate(-50%, 0) scale(0.6) rotateY(180deg); }
-  100% {
-    transform: translate(0, 0) scale(1) rotateY(180deg); } }
-@keyframes hero2Move {
-  0% {
-    opacity: 1;
-    transform: translate(-150%, 50%) scale(1); }
-  30% {
-    opacity: 1;
-    transform: translate(5%, 0) scale(1.1); }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0) scale(1); } }
-@keyframes hero3Move {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@keyframes hero4Move {
-  0% {
-    opacity: 0;
-    transform: scale(0); }
-  40% {
-    opacity: 1;
-    transform: scale(1.1); }
-  60% {
-    opacity: 1;
-    transform: scale(1); }
-  80% {
-    opacity: 1;
-    transform: scale(1.05); }
-  100% {
-    opacity: 1;
-    transform: scale(1); } }
-@keyframes hero5Move {
-  0% {
-    opacity: 0;
-    transform: scale(0); }
-  100% {
-    opacity: 1;
-    transform: scale(1); } }
-@keyframes loaderLogo {
-  0% {
-    transform: translate(-50%, -50%) scale(1); }
-  50% {
-    transform: translate(-50%, -50%) scale(1.1); }
-  100% {
-    transform: translate(-50%, -50%) scale(1); } }
-@keyframes dLogo {
-  0% {
-    transform: translate(-250%, -50%) rotate(-180deg); }
-  100% {
-    transform: translate(0, -50%) rotate(0deg); } }
-@keyframes border {
-  0% {
-    box-shadow: 60px -60px 0 1px #fff, -60px -60px 0 1px #fff, -60px 60px 0 1px #fff, 60px 60px 0 1px #fff, 0 0 0 1px #fff; }
-  25% {
-    box-shadow: 0 -125px 0 1px #fff, -60px -60px 0 1px #fff, -60px 60px 0 1px #fff, 60px 60px 0 1px #fff, 0 0 0 1px #e39835; }
-  50% {
-    box-shadow: 0 -125px 0 1px #fff, -125px 0px 0 1px #fff, -60px 60px 0 1px #fff, 60px 60px 0 1px #fff, 0 0 0 1px #e39835; }
-  75% {
-    box-shadow: 0 -125px 0 1px #fff, -125px 0px 0 1px #fff, 0px 125px 0 1px #fff, 60px 60px 0 1px #fff, 0 0 0 1px #e39835; }
-  100% {
-    box-shadow: 0 -125px 0 1px #fff, -125px 0px 0 1px #fff, 0px 125px 0 1px #fff, 120px 40px 0 1px #fff, 0 0 0 1px #e39835; } }
 @media screen and (max-width: 767px) {
   html.overflow {
     overflow: hidden;
