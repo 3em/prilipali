@@ -72,6 +72,10 @@ $(function () {
     windowWidth = $(window).width();
   });
 
+  $(window).on('load', function () {
+    loader();
+  });
+
   var heroText = {
     1: [
       {
@@ -95,6 +99,22 @@ $(function () {
       }
     ]
   };
+
+  /**
+   * loader activation and hide
+   */
+  function loader() {
+    setTimeout(function () {
+      $loader.addClass('active');
+      setTimeout(function () {
+        $body.addClass('show');
+        setTimeout(function () {
+          $body.removeClass('transitions').addClass('regular').removeClass('overflow');
+          $html.removeClass('overflow');
+        }, 4000)
+      }, 1000)
+    }, 500);
+  }
 
   /**
    * video play popup
@@ -163,23 +183,6 @@ $(function () {
     }
   }
   paralax();
-
-  /**
-   * loader activation and hide
-   */
-  function loader() {
-    setTimeout(function () {
-      $loader.addClass('active');
-      setTimeout(function () {
-        $body.addClass('show');
-        setTimeout(function () {
-          $body.removeClass('transitions').addClass('regular').removeClass('overflow');
-          $html.removeClass('overflow');
-        }, 4000)
-      }, 1000)
-    }, 500);
-  }
-  loader();
 
 
 });
