@@ -160,7 +160,7 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) rotateY(180deg) rotate(-90deg);
     width: 120px;
     height: 120px;
     border-radius: 50%;
