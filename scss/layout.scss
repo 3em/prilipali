@@ -220,10 +220,10 @@ body{
     }
 
     .b-section-top__bg{
-      background-position: center 59%;
+      background-position: center 50%;
     }
     .b-section-top__buildings div{
-      background-position: center 30%;
+      background-position: center 21%;
     }
 
     .b-section-top__hero{
@@ -348,7 +348,7 @@ a {
   position: absolute;
   top: 1vw;
   left: 50%;
-  transform: translate(-62%, 0);
+  transform: translate(-70%, 0);
   width: 24.4vw;
   height: 11.4vw;
   background: url("../i/product-logo.svg") no-repeat center;
@@ -428,7 +428,7 @@ a {
 
   div{
     position: absolute !important;
-    top:0;
+    top: -5% !important;
     left: -5% !important;
     right: -5%;
     bottom: -5%;
@@ -457,7 +457,7 @@ a {
 
 .b-section-top__bg{
   position: absolute !important;
-  top:0;
+  top: -5% !important;
   left: -5% !important;
   right: -5%;
   bottom: -5%;
@@ -529,7 +529,7 @@ a {
   &.b-section-top__hero_3{
     left: 40% !important;
     top: auto !important;
-    bottom: 29%;
+    bottom: 25.5%;
     width: 3.72vw;
     height: 6.38vw;
     background: url("../i/top-hero-3.svg") no-repeat center 40%;
@@ -537,8 +537,8 @@ a {
     pointer-events: auto;
 
     .b-section-top__hero-cloud{
-      right: 90%;
-      bottom: 45%;
+      right: 80%;
+      bottom: 70%;
       width: 10vw;
       height: 8.36vw;
       background: url("../i/top-hero-3_cloud.svg") no-repeat center;
@@ -551,8 +551,8 @@ a {
   }
 
   &.b-section-top__hero_4{
-    left: 48% !important;
-    bottom: -16%;
+    left: 45% !important;
+    bottom: -16.5%;
     top: auto !important;
     width: 16.33vw;
     height: 22vw;
@@ -562,7 +562,7 @@ a {
     .b-section-top__hero-cloud{
       left: 50%;
       transform: translate(-45%, 0);
-      bottom: 100%;
+      bottom: 105%;
       width: 18.4375vw;
       height: 13.86vw;
       background: url("../i/top-hero-4_cloud.svg") no-repeat center bottom;
