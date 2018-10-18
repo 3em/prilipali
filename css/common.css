@@ -762,6 +762,13 @@ a {
   .b-section-top {
     height: 78.46vw; }
 
+  .b-section-top__sky {
+    top: 0;
+    left: 0 !important;
+    right: 0;
+    bottom: 0;
+    background-size: 205% auto; }
+
   .b-section-top__bg {
     top: 0;
     left: 0 !important;
