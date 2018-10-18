@@ -239,10 +239,8 @@ a:active, a:focus, button:active, button:focus {
     transform: translate(0, 0) scale(1); } }
 @keyframes hero3Move {
   0% {
-    opacity: 0;
     transform: translate(0, 30%); }
   100% {
-    opacity: 1;
     transform: translate(0, 0); } }
 @keyframes hero4Move {
   0% {
@@ -324,7 +322,9 @@ body {
     animation: 0 !important;
     opacity: 1;
     transform: none;
-    transition: none; }
+    transition: transform .1s linear; }
+    body.regular .b-section-top__hero.b-section-top__hero_3 {
+      transition: transform .15s linear !important; }
   body.transitions .b-section-top__hero.b-section-top__hero_1 {
     opacity: 0;
     transform: translate(-150%, 0) scale(0.3); }
@@ -352,24 +352,27 @@ body {
     animation: dLogo 1s ease 1 forwards;
     animation-delay: 3s; }
   body.show .b-section-top__bg {
-    background-position: center 50%; }
+    background-position: center 62%; }
   body.show .b-section-top__buildings div {
-    background-position: center 21%; }
+    background-position: center 22%; }
+  body.show .b-section-top__sky {
+    background-position: center 70%; }
   body.show .b-section-top__hero.b-section-top__hero_1 {
-    animation: hero1Move 2s ease 1 forwards;
-    animation-delay: .6s; }
+    animation: hero1Move 2s ease 1 forwards; }
   body.show .b-section-top__hero.b-section-top__hero_2 {
     animation: hero2Move 1s ease 1 forwards;
-    animation-delay: .9s; }
+    animation-delay: .45s; }
   body.show .b-section-top__hero.b-section-top__hero_3 {
-    animation: hero3Move 2.8s ease 1 forwards;
-    animation-delay: 1.2s; }
+    animation: hero3Move 3s ease 1 forwards;
+    animation-delay: 1s;
+    opacity: 1;
+    transition: opacity .75s 1s; }
   body.show .b-section-top__hero.b-section-top__hero_4 {
     animation: hero4Move .8s ease 1 forwards;
     animation-delay: 1.2s; }
   body.show .b-section-top__hero.b-section-top__hero_5 {
     animation: hero5Move .5s ease 1 forwards;
-    animation-delay: .9s; }
+    animation-delay: .7s; }
   body.show .b-section-top__hero-cloud {
     opacity: 1; }
 
@@ -388,7 +391,6 @@ a {
   right: 0;
   bottom: 0;
   z-index: 100;
-  background: #fff;
   transition: opacity .4s, visibility .4s 0s; }
   .b-loader.active .b-loader__line {
     animation: border .6s ease 1 forwards; }
@@ -453,7 +455,7 @@ a {
   background: url("../i/product-logo.svg") no-repeat center;
   background-size: auto 100%;
   opacity: 0;
-  transition: opacity 1s 1.2s; }
+  transition: opacity 1s .5s; }
 
 .b-burger {
   position: absolute;
@@ -464,7 +466,7 @@ a {
   box-sizing: border-box;
   overflow: hidden;
   opacity: 0;
-  transition: opacity 1s 1.4s; }
+  transition: opacity 1s .5s; }
   .b-burger:hover:before {
     transform: translate(-50%, 0) scale(1.1); }
   .b-burger:before {
@@ -491,7 +493,7 @@ a {
   right: 0;
   width: 100%;
   bottom: 0;
-  transition: width 1s .4s;
+  transition: width 1.2s;
   backface-visibility: hidden; }
 
 .b-section-top {
@@ -512,13 +514,13 @@ a {
   overflow: hidden; }
   .b-section-top__buildings div {
     position: absolute !important;
-    top: -5% !important;
+    top: 0 !important;
     left: -5% !important;
     right: -5%;
     bottom: -5%;
-    background: url("../i/city-buildings.png") no-repeat center 11%;
+    background: url("../i/city-buildings.png") no-repeat center 0%;
     background-size: 100% auto;
-    transition: background-position 4s;
+    transition: background-position 4s, transform .3s linear;
     backface-visibility: hidden; }
 
 .b-section-top__wrapper {
@@ -537,13 +539,24 @@ a {
 
 .b-section-top__bg {
   position: absolute !important;
-  top: -5% !important;
+  top: 0 !important;
   left: -5% !important;
   right: -5%;
   bottom: -5%;
-  background: url("../i/city.jpg") no-repeat center 40%;
+  background: url("../i/city.png") no-repeat center 40%;
   background-size: 100% auto;
-  transition: background-position 4s;
+  transition: background-position 4s, transform .3s linear;
+  backface-visibility: hidden; }
+
+.b-section-top__sky {
+  position: absolute !important;
+  top: 0 !important;
+  left: -5% !important;
+  right: -5%;
+  bottom: -5%;
+  background: url("../i/city-sky.png") no-repeat center 0;
+  background-size: 100% auto;
+  transition: background-position 2s 2s;
   backface-visibility: hidden; }
 
 .b-section-top__hero-cloud {
@@ -596,12 +609,13 @@ a {
   .b-section-top__hero.b-section-top__hero_3 {
     left: 40% !important;
     top: auto !important;
-    bottom: 25.5%;
+    bottom: 27%;
     width: 3.72vw;
     height: 6.38vw;
     background: url("../i/top-hero-3.svg") no-repeat center 40%;
     background-size: 100% auto;
-    pointer-events: auto; }
+    pointer-events: auto;
+    opacity: 0; }
     .b-section-top__hero.b-section-top__hero_3 .b-section-top__hero-cloud {
       right: 80%;
       bottom: 70%;
