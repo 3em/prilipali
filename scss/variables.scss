@@ -1,17 +1,31 @@
-$MyriadProRegular: 'MyriadPro-Regular';
-$AnimeRegular: 'AnimeAcev05';
-$DigitalStripCyrillic: 'DigitalStripCyrillic';
+//$DigitalStripCyrillic: 'DigitalStripCyrillic';
+$FirenightRegular: 'Firenight-Regular';
+$OutofLineBB: 'OutofLineBB';
+$OutofLineBB_bold: 'OutofLineBB-bold';
+$OutofLineBB_italicBold: 'OutofLineBB-italicBold';
+$OutofLineBB_italic: 'OutofLineBB-italic';
 
 $minWidth: 1200px;
 
-$regularFS: 16px;
-$regularFLH: 31px;
+$sectionHeight: 35.15625vw;
+$inputsHeight: 2.34375vw + 0.3125vw * 2;
+
+$fs18: 1.40625vw;
+$lh24: 1.875vw;
+
+$regularFS: 1.09375vw;
+$regularFLH: 1.797vw;
 $smallFS: 13px;
 
 $wrapperVal: 2.5%;
 $wrapperValMob: 4%;
 
 $regularColor: #111010;
+$yellowColor: #fec02e;
+$redColor: #d8171e;
+$pinkColor: #ffcdb9;
+
+
 $greyColor: rgba(0,0,0, .4);
 $borderColor: rgba(0,0,0, .1);
 $linkColor: #FF4141;
@@ -20,11 +34,11 @@ $linkColorHover: rgba(255,65,65, .8);
 
 
 // placeholder
-@mixin placeholder ($color, $ff, $selector)
+@mixin placeholder ($color, $ff, $selector, $lh)
 {
   $selector: unquote($selector);
-  #{$selector}::-webkit-input-placeholder{color: $color; font-family: $ff;}
-  #{$selector}:-moz-placeholder{color: $color; font-family: $ff;}
-  #{$selector}::-moz-placeholder{color: $color; font-family: $ff;}
-  #{$selector}:-ms-input-placeholder{color: $color; font-family: $ff;}
+  #{$selector}::-webkit-input-placeholder{color: $color; font-family: $ff; line-height: $lh;}
+  #{$selector}:-moz-placeholder{color: $color; font-family: $ff; line-height: $lh;}
+  #{$selector}::-moz-placeholder{color: $color; font-family: $ff;line-height: $lh;}
+  #{$selector}:-ms-input-placeholder{color: $color; font-family: $ff;line-height: $lh;}
 }

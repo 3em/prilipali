@@ -1,33 +1,61 @@
 @font-face {
-  font-family: 'MyriadPro-Regular';
-  src: url('../fonts/MyriadPro-Regular.eot');
-  src: url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
-  url('../fonts/MyriadPro-Regular.woff') format('woff'),
-  url('../fonts/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg'),
-  url('../fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype');
+  font-family: 'Firenight-Regular';
+  src: url('../fonts/Firenight-Regular.eot');
+  src: url('../fonts/Firenight-Regular.woff2') format('woff2'),
+  url('../fonts/Firenight-Regular.woff') format('woff'),
+  url('../fonts/Firenight-Regular.svg#Firenight-Regular') format('svg'),
+  url('../fonts/Firenight-Regular.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'AnimeAcev05';
-  src: url('../fonts/anime-ace-v05.eot');
-  src: url('../fonts/anime-ace-v05.woff2') format('woff2'),
-  url('../fonts/AnimeAcev05.woff') format('woff'),
-  url('../fonts/AnimeAcev05.svg#AnimeAcev05') format('svg'),
-  url('../fonts/anime-ace-v05.eot?#iefix') format('embedded-opentype');
-  font-weight: normal;
+/* Webfont: OutofLineBB-Bold */@font-face {
+  font-family: 'OutofLineBB-bold';
+  src: url('../fonts/OutofLineBB-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/OutofLineBB-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/OutofLineBB-Bold.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/OutofLineBB-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/OutofLineBB-Bold.svg#OutofLineBB-Bold') format('svg'); /* Legacy iOS */
   font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
 }
 
-@font-face {
-  font-family: 'DigitalStripCyrillic';
-  src: url('../fonts/DigitalStripCyrillic.eot');
-  src: url('../fonts/DigitalStripCyrillic.woff2') format('woff2'),
-  url('../fonts/DigitalStripCyrillic.woff') format('woff'),
-  url('../fonts/DigitalStripCyrillic.svg#DigitalStripCyrillic') format('svg'),
-  url('../fonts/DigitalStripCyrillic.eot?#iefix') format('embedded-opentype');
-  font-weight: normal;
-  font-style: normal;
+/* Webfont: OutofLineBB-BoldItalic */@font-face {
+  font-family: 'OutofLineBB-italicBold';
+  src: url('../fonts/OutofLineBB-BoldItalic.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/OutofLineBB-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/OutofLineBB-BoldItalic.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/OutofLineBB-BoldItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/OutofLineBB-BoldItalic.svg#OutofLineBB-BoldItalic') format('svg'); /* Legacy iOS */
+  font-style: italic;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
 }
+
+/* Webfont: OutofLineBB-Italic */@font-face {
+  font-family: 'OutofLineBB-italic';
+  src: url('../fonts/OutofLineBB-Italic.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/OutofLineBB-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/OutofLineBB-Italic.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/OutofLineBB-Italic.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/OutofLineBB-Italic.svg#OutofLineBB-Italic') format('svg'); /* Legacy iOS */
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+/* Webfont: OutofLineBB */@font-face {
+  font-family: 'OutofLineBB';
+  src: url('../fonts/OutofLineBB.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/OutofLineBB.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/OutofLineBB.woff') format('woff'), /* Modern Browsers */
+  url('../fonts/OutofLineBB.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/OutofLineBB.svg#OutofLineBB') format('svg'); /* Legacy iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+
 

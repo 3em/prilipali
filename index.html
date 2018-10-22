@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width">
     <title>Веселые прилипалы 4</title>
 
+    <link rel="stylesheet" href="css/jquery-ui.css" media="all">
     <link rel="stylesheet" href="css/common.css" media="all">
 
     <script src="js/libs/jquery-3.3.1.min.js"></script>
+    <script src="js/libs/jquery-ui.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/libs/parallax.min.js"></script>
+    <script src="js/libs/phone-mask.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
 
 
 </head>
@@ -49,11 +54,11 @@
             <div class="js-parallax b-section-top__hero-box">
                 <div class="b-section-top__hero b-section-top__hero_1"></div>
                 <div data-id="1" data-text="0" data-depth="0.08" class="js-hero-click b-section-top__hero b-section-top__hero_click b-section-top__hero_2">
-                    <div class="b-section-top__hero-cloud">
+                    <a href="#" class="js-promo-code-call b-section-top__hero-cloud">
                         Кажется,
                         у&nbsp;тебя&nbsp;есть
                         промокод?
-                    </div>
+                    </a>
                 </div>
                 <div data-depth="0.2" data-friction-x=".01" data-friction-y=".01" class="b-section-top__hero b-section-top__hero_3">
                     <a href="#" class="js-call-video-main b-section-top__hero-cloud">
@@ -78,12 +83,200 @@
             </div>
         </section>
 
+        <section class="b-section-map">
+
+            <div id="map" class="b-section-map__wrapper"></div>
+
+            <form action="http://map.ru" class="js-shop-form b-shops-choose">
+                <div class="js-shop-form-border b-shops-choose__border"></div>
+                <h2 class="b-shops-choose__title">Найди ближайший магазин Дикси</h2>
+
+                <div class="b-shops-choose__wrapper">
+
+                    <div class="js-cities-select b-dropdown__box">
+                        <div class="b-dropdown">
+                            <div class="b-dropdown__arrow"></div>
+                            <span class="b-dropdown__text js-link-stop">Москва</span>
+                            <ul class="b-dropdown__sub"></ul>
+                        </div>
+                        <input class="hidden js-input-for-select b-input" id="shops_city" name="shops[city]" type="text">
+                    </div>
+
+                    <div class="js-areas-select b-dropdown__box open">
+                        <div class="b-dropdown b-dropdown_open">
+                            <div class="b-dropdown__arrow"></div>
+                            <span class="b-dropdown__text js-link-stop">Выберите район</span>
+                            <ul class="b-dropdown__sub">
+                                <li class="b-dropdown__item">Район 1</li>
+                                <li class="b-dropdown__item">Район 2</li>
+                                <li class="b-dropdown__item">Район 3</li>
+                                <li class="b-dropdown__item">Район 4</li>
+                            </ul>
+                        </div>
+                        <input class="hidden js-input-for-select b-input" id="shops_area" name="shops[area]" type="text">
+                    </div>
+
+                    <div class="b-input__box b-input__box_autocomplete disabled">
+                        <input type="text" name="shops[address]" id="shops_address" class="js-input-address b-input" placeholder="Найти магазин">
+                    </div>
+
+
+                </div>
+            </form>
+
+        </section>
+
     </div>
+
+
 
     <div class="js-overlay-video b-video-overlay">
         <a href="#" class="js-overlay-video-close b-video-wrapper__close"></a>
         <div class="b-video-wrapper">
             <div id="player"></div>
+        </div>
+    </div>
+
+    <div class="js-overlay-promo-code b-overlay ">
+
+        <div class="js-popup b-popup">
+            <span class="js-popup-border b-popup__border"></span>
+            <a href="#" class="js-close-promo-code b-video-wrapper__close"></a>
+            <span class="b-popup__logo"></span>
+            <div class="b-popup__hero-1"></div>
+            <div class="b-popup__hero-2"></div>
+
+            <ul class="u-clear-fix b-popup__tabs">
+                <li class="b-popup__tabs-item">
+                    <a href="#promo-code_form" class="js-popup-tab b-popup__tabs-link active">
+                        <span>Ввести промокод</span>
+                    </a>
+                </li>
+                <li class="b-popup__tabs-item">
+                    <a href="#promo-code_info" class="js-popup-tab b-popup__tabs-link">
+                        <span>Где получить промокод</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div id="promo-code_form" class="js-tabs-box b-popup__tabs-box">
+                <form action="http://promo-code.php" class="js-promo-from b-promo-form">
+
+                    <div class="b-promo-form__code">
+                        <div class="js-input-box u-clear-fix b-input__box">
+                            <label for="promoCode_code" class="b-input__label">Код:</label>
+                            <input type="text" name="promoCode[code]" id="promoCode_code" class="js-required js-input b-input" placeholder="Введите код здесь">
+                        </div>
+                    </div>
+
+                    <div class="u-clear-fix b-column__box">
+                        <div class="b-column b-column_x3">
+                            <div class="js-input-box u-clear-fix b-input__box">
+                                <label for="promoCode_email" class="b-input__label">E-mail:</label>
+                                <input type="email" name="promoCode[email]" id="promoCode_email" class="js-required js-email-input js-input b-input">
+                            </div>
+                        </div>
+                        <div class="b-column b-column_x3">
+                            <div class="js-input-box u-clear-fix b-input__box">
+                                <label for="promoCode_phone" class="b-input__label">Телефон:</label>
+                                <input type="text" name="promoCode[phone]" id="promoCode_phone" class="js-required js-input js-phone-input b-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-clear-fix b-column__box b-column__box_mb">
+                        <div class="b-column b-column_x3">
+                            <div class="js-input-box u-clear-fix b-input__box">
+                                <label for="promoCode_surname" class="b-input__label">Фамилия:</label>
+                                <input type="text" name="promoCode[surname]" id="promoCode_surname" class="js-required js-input b-input">
+                            </div>
+                        </div>
+                        <div class="b-column b-column_x3">
+                            <div class="js-input-box u-clear-fix b-input__box">
+                                <label for="promoCode_name" class="b-input__label">Имя:</label>
+                                <input type="text" name="promoCode[name]" id="promoCode_name" class="js-required js-input b-input">
+                            </div>
+                        </div>
+                        <div class="b-column b-column_x3">
+                            <div class="js-input-box u-clear-fix b-input__box">
+                                <label for="promoCode_secondname" class="b-input__label">Отчество:</label>
+                                <input type="text" name="promoCode[secondname]" id="promoCode_secondname" class="js-required js-input b-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="u-clear-fix b-column__box">
+                        <div class="b-column b-column_x3">
+                            <div class="js-input-box u-clear-fix b-input__box">
+                                <label for="promoCode_index" class="b-input__label">Индекс:</label>
+                                <input type="text" name="promoCode[index]" id="promoCode_index" class="js-required js-input b-input">
+                            </div>
+                        </div>
+                        <div class="b-column b-column_x3">
+                            <div class="js-input-box u-clear-fix b-input__box">
+                                <label for="promoCode_region" class="b-input__label">Область:</label>
+                                <input type="text" name="promoCode[region]" id="promoCode_region" class="js-required js-input b-input">
+                            </div>
+                        </div>
+                        <div class="b-column b-column_x3">
+                            <div class="js-input-box u-clear-fix b-input__box">
+                                <label for="promoCode_city" class="b-input__label">Город:</label>
+                                <input type="text" name="promoCode[city]" id="promoCode_city" class="js-required js-input b-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-clear-fix b-column__box b-column__box_mb">
+                        <div class="b-column b-column_x3">
+                            <div class="js-input-box u-clear-fix b-input__box">
+                                <label for="promoCode_street" class="b-input__label">Улица:</label>
+                                <input type="text" name="promoCode[street]" id="promoCode_street" class="js-required js-input b-input">
+                            </div>
+                        </div>
+                        <div class="b-column b-column_x3">
+                            <div class="js-input-box u-clear-fix b-input__box">
+                                <label for="promoCode_building" class="b-input__label">Дом:</label>
+                                <input type="text" name="promoCode[building]" id="promoCode_building" class="js-required js-input b-input">
+                            </div>
+                        </div>
+                        <div class="b-column b-column_x3">
+                            <div class="js-input-box u-clear-fix b-input__box">
+                                <label for="promoCode_flat" class="b-input__label">Квартира:</label>
+                                <input type="text" name="promoCode[flat]" id="promoCode_flat" class="js-required js-input b-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="js-input-box b-checkbox__box">
+                        <input type="checkbox" name="promoCode[agree]" id="promoCode_agree" class="js-required js-input js-agree js-checkbox b-checkbox">
+                        <label for="promoCode_agree" class="b-checkbox__label">
+                            <i class="b-checkbox__label-icon"></i>
+                            Соглашаюсь на обработку персональных данных
+                        </label>
+                    </div>
+
+                    <div class="b-button__box">
+                        <button type="submit" class="b-popup__button"><span>Отправить</span></button>
+
+                        <div class="js-promo-from-error b-promo-form__error">Возникла ошибка.<br>Повторите попытку позже.</div>
+                    </div>
+                </form>
+
+                <div class="js-promo-from-success b-promo-form__success hidden">
+                    Спасибо, ваш промокод отправлен.
+                </div>
+            </div>
+
+            <div id="promo-code_info" class="js-tabs-box b-popup__tabs-box hidden">
+                <div class="b-promo-code__info">
+                    <p class="b-promo-code_text">
+                        Играйте в приложение
+                        «Веселые Прилипалы 4.
+                        Супергерои»
+                        и&nbsp;получайте призы!
+                    </p>
+                    <a href="#" target="_blank" class="b-promo-code__app b-promo-code__app-store"></a>
+                    <a href="#" target="_blank" class="b-promo-code__app b-promo-code__gp"></a>
+                </div>
+            </div>
         </div>
     </div>
 
