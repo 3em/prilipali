@@ -68,7 +68,6 @@ $(function () {
   var $callVideoMain = $('.js-call-video-main');
   var $popup = $('.js-popup');
   var $popupBorder = $('.js-popup-border');
-  var windowWidth = $(window).width();
   var heroText = {
     1: [
       {
@@ -79,7 +78,7 @@ $(function () {
     ],
     2: [
       {
-        text: 'Получи веселого <br>прилипалу за каждые 500 р. в чеке!'
+        text: 'Получи веселого <br>прилипалу за каждые 500&nbsp;р. в&nbsp;чеке!'
       },{
         text: 'Получи веселого прилипалу <a href="#">по ссылке</a>'
       }
@@ -104,17 +103,255 @@ $(function () {
   var $promoCodePOpupClose = $('.js-close-promo-code');
   var $shopForm = $('.js-shop-form');
   var $shopFormBorder = $('.js-shop-form-border');
+  var $carouselHeroes = $('.js-carousel-heroes');
+  var $carouselHeroes_slideIndex = $('.js-carousel-heroes-num');
+  var $sectionCarousel = $('.js-section-carousel');
+  var cloneCarouselHeroes = $carouselHeroes.clone();
+  var $sectionNav = $('.js-section-nav');
+  var $menuBorder = $('.js-menu-border');
+  var $menuBurgerWrapper = $('.js-menu-wrapper');
+  var $burgerCall = $('.js-burger-call');
+  var $menuBurgerOverlay = $('.js-menu-overlay');
+  var $menuClose = $('.js-menu-close');
+  var $promoCodeMenuCall = $('.js-promo-code-menu-call');
+  var $menuLink = $('.js-menu-link');
+  var $footerMenuLink = $('.js-footer-menu-link');
+  var $scrollTopLink = $('.js-scroll-top');
+  var $playNumberLink = $('.js-play-number');
+  var playTextObj = {
+    1: {
+      title: "Береги голову",
+      url: "./i/section-play/downloads/Stikeez_SiteRebus_01.pdf",
+      text: "никогда не расстается со своей каской, особенно когда наступает время спасать мир. Чтобы вступить в бой с Тайфуном, тебе понадобится такой же супергеройский атрибут. Сделай его сам и стань настоящим супергероем!"
+    },
+    2: {
+      title: "Красота спасет мир",
+      url: "./i/section-play/downloads/Stikeez_SiteRebus_02.pdf",
+      text: "Даже на спасение мира Бобо не хочет отправляться без своего любимого цветочка в прическе. Помоги Бобо ослабить Тайфун красотой — нарисуй 5 цветочков, которыми она могла бы украсить свою прическу."
+    },
+    3: {
+      title: "Ловушка для ума",
+      url: "./i/section-play/downloads/Stikeez_SiteRebus_03.pdf",
+      text: "настолько хитрый, что может перехитрить не только злодеев, но и самого себя! Он уже заманил Тайфун в лабиринт, но и сам потерялся. Помоги Мистеру Плуту выйти из лабиринта и продолжить спасать мир!"
+    },
+    4: {
+      title: "По следам супергероя",
+      url: "./i/section-play/downloads/Stikeez_SiteRebus_04.pdf",
+      text: "вперед всех остальных прилипал полетел сражаться с ураганом. Соедини все точки на рисунке — и узнаешь, что герой вытащил из самого эпицентра урагана."
+    },
+    5: {
+      title: "Новая суперсила",
+      url: "./i/section-play/downloads/Stikeez_SiteRebus_05.pdf",
+      text: "давно прочитал мысли Тайфунного монстра и знает, как его остановить! Но для этого ему понадобится твоя помощь. Тебе нужно собрать Мыслехвата из... бумаги. Скорее бери листок и собирай супергероя по схеме! Теперь он может прыгать и точно спасет город!"
+    },
+    6: {
+      title: "Валентинка",
+      url: "./i/section-play/downloads/Stikeez_SiteRebus_06.pdf",
+      text: "Суперспособность Сеньориты — сила красоты. Может быть, Тайфун удастся победить с помощью симпатичной открытки? Проверь это — распечатай открытку-сердце и раскрась по своему вкусу. Тайфун точно начнет умиляться и забудет о своем злом плане."
+    },
+    7: {
+      title: "Все самое необходимое",
+      url: "./i/section-play/downloads/Stikeez_SiteRebus_07.pdf",
+      text: " Чтобы составить план по спасению мира, Октопусу нужно много чего найти, ведь у него дома настоящий хаос после вечеринки осьминогов! Помоги главному умнику прилипал найти все, что ему нужно, для того чтобы спасти город."
+    },
+    8: {
+      title: "Найди вкусняшку",
+      url: "./i/section-play/downloads/Stikeez_SiteRebus_08.pdf",
+      text: "Чтобы победить Тайфун, Сарделькину необходимо подкрепиться. Но он умудрился растерять все свои сосиски у себя дома! Попробуй найти их!"
+    },
+    9: {
+      title: "Супермозг",
+      url: "./i/section-play/downloads/Stikeez_SiteRebus_09.pdf",
+      text: "Тайфун приближается! Всех супергероев может собрать только утенок Супердак, ведь именно он знает все обо всех. Помоги ему — реши его хитрый сканворд и узнай, кто готов защищать город!"
+    },
+    10: {
+      title: "Найди помощника",
+      url: "./i/section-play/downloads/Stikeez_SiteRebus_10.pdf",
+      text: "Даже главному компьютерному гению среди супергероев нужна твоя помощь! Чтобы ослабить Тайфун, тебе кое-что понадобится. Скорее узнай, что именно, — раскрась картинку."
+    }
+  };
+  var $playTextInsert = $('.js-play-text-insert');
+
+
+  $(window).on('scroll', function () {
+    activeSectionScroll();
+  });
 
   $(window).on('resize', function () {
     windowWidth = $(window).width();
+    windowHeight = $(window).height();
     popupBorderHeight();
     mapChoosepBorderHeight();
+    destroyAndInitHeroesCarousel();
+    activeSectionScroll();
+    menuBorderHeight();
   });
 
   $(window).on('load', function () {
     loader();
     scrollTo($body, 0, 0);
   });
+
+
+  /**
+   * play number click
+   */
+  $playNumberLink.on('click', function (e) {
+    e.preventDefault();
+
+    if (!$(this).hasClass('active')){
+      $playNumberLink.removeClass('active');
+      $(this).addClass('active');
+      var id = parseInt($(this).attr('data-id'));
+      var thisItemArr = playTextObj[id];
+
+      $playTextInsert.html('<h6><a target="_blank" href="'+thisItemArr.url+'" download>'+thisItemArr.title+'</a></h6><p>'+thisItemArr.text+'</p>').addClass('hero-text');
+    }
+  });
+
+  /**
+   * scroll top page on click
+   */
+  $scrollTopLink.on('click', function (e) {
+    e.preventDefault();
+    scrollTo($body);
+  });
+
+  /**
+   * footer menu link scroll to section
+   */
+  $footerMenuLink.on('click', function (e) {
+    e.preventDefault();
+
+    var href = $(this).attr('href');
+    var percent = windowWidth / 100;
+    var offset = (windowWidth >= 768) ? 2 * percent : 3.5 * percent;
+    scrollTo($('#'+href), offset);
+  });
+
+  /**
+   * menu link click scroll page
+   */
+  $menuLink.on('click', function (e) {
+    e.preventDefault();
+    var href = $(this).attr('href');
+    closeBurgerMenu();
+    var percent = windowWidth / 100;
+    var offset = (windowWidth >= 768) ? 2 * percent : 3.5 * percent;
+    scrollTo($('#'+href), offset);
+  });
+
+
+  /**
+   * open burger menu
+   */
+  $burgerCall.on('click', function (e) {
+    e.preventDefault();
+
+    $menuBurgerOverlay.addClass('open');
+    $body.addClass('overflow');
+  });
+
+  /**
+   * promo call from menu
+   */
+  $promoCodeMenuCall.on('click', function (e) {
+    e.preventDefault();
+    closeBurgerMenu();
+    setTimeout(function () {
+      openPopupPromoCode();
+    }, 700);
+  });
+
+  /**
+   * close menu on click
+   */
+  $menuClose.on('click', function (e) {
+    e.preventDefault();
+    closeBurgerMenu();
+  });
+
+  /**
+   * fn close burger menu
+   */
+  function closeBurgerMenu() {
+    $menuBurgerOverlay.removeClass('open');
+    $body.removeClass('overflow');
+  }
+
+  /**
+   * scroll sections activate
+   */
+  function activeSectionScroll() {
+    var windowPart = parseInt(windowHeight / 2);
+    $sectionNav.each(function () {
+      var val = $(this)[0].getBoundingClientRect();
+
+      if (val.top <= windowPart && val.top > windowPart - val.height && !$(this).hasClass('active-section')){
+        $sectionNav.removeClass('active-section');
+        $(this).addClass('active-section');
+        var id = $(this).attr('id');
+        $menuLink.removeClass('active');
+        $('.js-menu-link[href='+id+']').addClass('active');
+      }
+    })
+  }
+  activeSectionScroll();
+
+  /**
+   * destroy and init carousel
+   */
+  function destroyAndInitHeroesCarousel() {
+    if ($('.js-carousel-heroes').data("carousel")){
+      $('.js-carousel-heroes').data("carousel").deactivate();
+    }
+
+    if (windowWidth >= 768 && $('.js-carousel-heroes').hasClass('slick-slider')){
+      $('.js-carousel-heroes').slick('unslick');
+      $('.js-carousel-heroes').remove();
+      $sectionCarousel.append(cloneCarouselHeroes);
+    } else if (windowWidth < 768 && !$('.js-carousel-heroes').hasClass('slick-slider')) {
+      $('.js-carousel-heroes').remove();
+      $sectionCarousel.append(cloneCarouselHeroes);
+    }
+
+    initHeroesCarousel();
+  }
+
+  /**
+   * init heroes carousel different libs depend of width
+   */
+  function initHeroesCarousel() {
+    if (windowWidth >= 768){
+      $('.js-carousel-heroes').Cloud9Carousel({
+        bringToFront: true,
+        frontItemClass: 'active',
+        itemClass: 'b-heroes-carousel__item',
+        farScale: 0.1,
+        yRadius: $('.js-carousel-heroes').height() / 6 * -1,
+        xRadius: $('.js-carousel-heroes').width() / 2
+      });
+    } else if (windowWidth < 768 && !$('.js-carousel-heroes').hasClass('slick-slider')) {
+      $carouselHeroes_slideIndex.html('1');
+
+      $('.js-carousel-heroes').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        touchThreshold: 20
+      });
+
+      $('.js-carousel-heroes').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+        var numSlide = parseInt(nextSlide) + 1;
+        $carouselHeroes_slideIndex.html(numSlide);
+      });
+    }
+  }
+  initHeroesCarousel();
+
+
 
   /**
    * open popup promo on load if hash
@@ -163,13 +400,13 @@ $(function () {
     $('.js-popup-tab', $('.b-popup__tabs-item').eq(idText)).trigger('click');
 
     openPopupPromoCode();
-    window.location.hash = '#?promoCodePopup';
   });
 
   /**
    * promo code popup open
    */
   function openPopupPromoCode() {
+    window.location.hash = '#?promoCodePopup';
     $body.addClass('overflow');
     $overlayPromoCode.addClass('open');
     scrollTo($body, 0, 500, $overlayPromoCode);
@@ -206,10 +443,22 @@ $(function () {
   /**
    * set popup promo cod border height
    */
+  function menuBorderHeight() {
+    setTimeout(function () {
+      var height = $menuBurgerWrapper.outerHeight(true);
+      $menuBorder.css('border-bottom-width', height+'px');
+    }, 10);
+  }
+  menuBorderHeight();
+
+  /**
+   * set popup promo cod border height
+   */
   function mapChoosepBorderHeight() {
     setTimeout(function () {
       var heightPopup = $shopForm.height();
-      var val = parseInt(heightPopup + 1.4 * 12.8);
+      var val = 0;
+      (windowWidth >= 768) ? val = parseInt(heightPopup + 1.4 * 12.8) : val = parseInt(heightPopup + 4 * 3.75);
       $shopFormBorder.css('border-bottom-width', val+'px');
     }, 10);
   }
@@ -222,10 +471,10 @@ $(function () {
     setTimeout(function () {
       $loader.addClass('active');
       setTimeout(function () {
-        $body.addClass('show').removeClass('overflow');
-        $html.removeClass('overflow');
+        $body.addClass('show');
         setTimeout(function () {
-          $body.removeClass('transitions').addClass('regular');
+          $body.removeClass('transitions').addClass('regular').removeClass('overflow');
+          $html.removeClass('overflow');
         }, 4000)
       }, 1000)
     }, 500);
@@ -271,6 +520,10 @@ $(function () {
     if (e.which == 27 && $overlayPromoCode.hasClass('open')) {
       closePopupPromoCode();
     }
+
+    if (e.which == 27 && $menuBurgerOverlay.hasClass('open')) {
+      closeBurgerMenu();
+    }
   });
 
   /**
@@ -281,6 +534,10 @@ $(function () {
 
     if ($target.is('.js-overlay-promo-code')){
       closePopupPromoCode();
+    }
+
+    if ($target.is('.js-menu-overlay')){
+      closeBurgerMenu();
     }
   });
 

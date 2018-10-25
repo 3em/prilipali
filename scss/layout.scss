@@ -202,6 +202,10 @@ body{
 
   &.show{
 
+    .b-section-carousel{
+      opacity: 1;
+    }
+
     .b-loader{
       background: transparent;
       opacity: 0;
@@ -266,12 +270,12 @@ body{
 }
 
 a {
-  //color: $linkColor;
+  color: $redColor;
   text-decoration: none;
   transition: color .25s;
 
   &:hover{
-    //color: $linkColorHover;
+    color: $regularColor;
   }
 }
 
@@ -366,11 +370,11 @@ a {
 }
 
 .b-burger{
-  position: absolute;
+  position: fixed;
   right: $wrapperVal;
   top: 0;
   width: 6.25vw;
-  height: 100%;
+  height: 7.4vw;
   box-sizing: border-box;
   overflow: hidden;
   opacity: 0;
@@ -440,7 +444,7 @@ a {
     left: -5% !important;
     right: -5%;
     bottom: -5%;
-    background: url("../i/city-buildings.png") no-repeat center 0%;
+    background: url("../i/section-top/city-buildings.png") no-repeat center 0%;
     background-size: 100% auto;
     transition: background-position 4s, transform .3s linear;
     backface-visibility: hidden;
@@ -469,7 +473,7 @@ a {
   left: -5% !important;
   right: -5%;
   bottom: -5%;
-  background: url("../i/city.png") no-repeat center 40%;
+  background: url("../i/section-top/city.png") no-repeat center 40%;
   background-size: 100% auto;
   transition: background-position 4s, transform .3s linear;
   backface-visibility: hidden;
@@ -481,7 +485,7 @@ a {
   left: -5% !important;
   right: -5%;
   bottom: -5%;
-  background: url("../i/city-sky.png") no-repeat center 0;
+  background: url("../i/section-top/city-sky.png") no-repeat center 0;
   background-size: 100% auto;
   transition: background-position 2s 2s;
   backface-visibility: hidden;
@@ -490,8 +494,8 @@ a {
 .b-section-top__hero-cloud{
   position: absolute;
   z-index: 5;
-  font-size: 1vw;
-  line-height: 1.71875vw;
+  font-size: $fs18;
+  line-height: $lh24;
   text-align: center;
   box-sizing: border-box;
   color: $regularColor;
@@ -521,7 +525,7 @@ a {
     top: -20% !important;
     width: 34.2vw;
     height: 26.8vw;
-    background: url("../i/top-hero-1.svg") no-repeat center;
+    background: url("../i/section-top/top-hero-1.svg") no-repeat center;
     background-size: 100% auto;
   }
 
@@ -531,7 +535,7 @@ a {
     bottom: -3vw;
     width: 19.1vw;
     height: 17.1875vw;
-    background: url("../i/top-hero-2.svg") no-repeat center;
+    background: url("../i/section-top/top-hero-2.svg") no-repeat center;
     background-size: 100% auto;
 
     .b-section-top__hero-cloud{
@@ -539,7 +543,7 @@ a {
       bottom: 45%;
       width: 12.1875vw;
       height: 11.71875vw;
-      background: url("../i/top-hero-2_cloud.svg") no-repeat center;
+      background: url("../i/section-top/top-hero-2_cloud.svg") no-repeat center;
       background-size: 100% auto;
       padding: 2.8vw 1vw 0 2vw;
       transition: opacity .25s 2.7s;
@@ -547,8 +551,8 @@ a {
       span{
         display: block;
         padding: 0.8vw 0 0;
-        font-size: .91vw;
-        margin: 0 -0.3vw 0 0;
+        font-size: 1.1vw;
+        margin: 0 -0.5vw 0 -0.3vw;
       }
     }
   }
@@ -559,7 +563,7 @@ a {
     bottom: 27%;
     width: 3.72vw;
     height: 6.38vw;
-    background: url("../i/top-hero-3.svg") no-repeat center 40%;
+    background: url("../i/section-top/top-hero-3.svg") no-repeat center 40%;
     background-size: 100% auto;
     pointer-events: auto;
     opacity: 0;
@@ -569,11 +573,11 @@ a {
       bottom: 70%;
       width: 10vw;
       height: 8.36vw;
-      background: url("../i/top-hero-3_cloud.svg") no-repeat center;
+      background: url("../i/section-top/top-hero-3_cloud.svg") no-repeat center;
       background-size: 100% auto;
-      padding: 4.3vw 3vw 0 .7vw;
-      font-size: 0.55vw;
-      line-height: 0.7vw;
+      padding: 4vw 3vw 0 .7vw;
+      font-size: 0.75vw;
+      line-height: 0.9vw;
       transition: opacity .25s 3.05s;
     }
   }
@@ -584,7 +588,7 @@ a {
     top: auto !important;
     width: 16.33vw;
     height: 22vw;
-    background: url("../i/top-hero-4.svg") no-repeat center;
+    background: url("../i/section-top/top-hero-4.svg") no-repeat center;
     background-size: 100% auto;
 
     .b-section-top__hero-cloud{
@@ -593,9 +597,9 @@ a {
       bottom: 105%;
       width: 18.4375vw;
       height: 13.86vw;
-      background: url("../i/top-hero-4_cloud.svg") no-repeat center bottom;
+      background: url("../i/section-top/top-hero-4_cloud.svg") no-repeat center bottom;
       background-size: 100% auto;
-      padding: 3.7vw 1vw 0 1vw;
+      padding: 3.4vw 1vw 0 1vw;
       transition: opacity .25s 2s;
     }
   }
@@ -607,7 +611,7 @@ a {
     bottom: 2%;
     width: 9.8vw;
     height: 13vw;
-    background: url("../i/top-hero-5.svg") no-repeat center;
+    background: url("../i/section-top/top-hero-5.svg") no-repeat center;
     background-size: 100% auto;
 
     .b-section-top__hero-cloud{
@@ -615,9 +619,9 @@ a {
       bottom: 80%;
       width: 12.58vw;
       height: 14.77vw;
-      background: url("../i/top-hero-5_cloud.svg") no-repeat center bottom;
+      background: url("../i/section-top/top-hero-5_cloud.svg") no-repeat center bottom;
       background-size: 100% auto;
-      padding: 2.3vw 1vw 0 1vw;
+      padding: 2vw 1vw 0 1vw;
       transition: opacity .25s 2.35s;
     }
   }
@@ -629,7 +633,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(40,38,41, .95);
+  background: $overlayBG;
   z-index: 200;
   visibility: hidden;
   opacity: 0;
@@ -691,7 +695,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(40,38,41, .95);
+  background: $overlayBG;
   z-index: 200;
   overflow-x: hidden;
   visibility: hidden;
@@ -805,7 +809,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("../i/top-hero-2.svg") no-repeat center;
+    background: url("../i/section-top/top-hero-2.svg") no-repeat center;
     background-size: 100% auto;
     z-index: 2;
   }
@@ -818,7 +822,7 @@ a {
     height: 31.40625vw;
     left: 0;
     top: 0;
-    background: url("../i/popup-headhog-shadow.png") no-repeat;
+    background: url("../i/popup-promo/popup-headhog-shadow.png") no-repeat;
     background-size: 100% auto;
     transform: rotate(9deg);
     opacity: 0;
@@ -842,7 +846,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("../i/popup-hero-1.svg") no-repeat center;
+    background: url("../i/popup-promo/popup-hero-1.svg") no-repeat center;
     background-size: 100% auto;
     z-index: 2;
   }
@@ -855,7 +859,7 @@ a {
     height: 35.15625vw;
     right: 0;
     top: 0;
-    background: url("../i/popup-dack-shadow.png") no-repeat;
+    background: url("../i/popup-promo/popup-dack-shadow.png") no-repeat;
     background-size: 100% auto;
     opacity: 0;
     transition: opacity .25s .85s;
@@ -870,6 +874,7 @@ a {
   font-style: italic;
   transform: rotate(-2.7deg);
   font-weight: bold;
+  font-style: italic;
   letter-spacing: .05em;
   z-index: 4;
 
@@ -893,7 +898,7 @@ a {
 
     span{
       padding-bottom: .3vw;
-      background: url("../i/popup-tab-underline.svg") repeat-x left bottom;
+      background: url("../i/popup-promo/popup-tab-underline.svg") repeat-x left bottom;
     }
 
     &.active{
@@ -1057,7 +1062,7 @@ a {
   transform: translate(0, -50%) scale(0);
   width: 26.40625vw;
   height: 11.17vw;
-  background: url("../i/popup-error-bg.svg") no-repeat center;
+  background: url("../i/popup-promo/popup-error-bg.svg") no-repeat center;
   background-size: 100% auto;
   color: #fff;
   box-sizing: border-box;
@@ -1092,6 +1097,7 @@ a {
     line-height: 5.859375vw;
     font-size: 2.578vw;
     font-weight: bold;
+    font-style: italic;
     letter-spacing: .05em;
     text-align: center;
     cursor: pointer;
@@ -1104,13 +1110,15 @@ a {
       right: 0;
       bottom: 0;
       z-index: 1;
-      background: url("../i/popup-button.svg") no-repeat center;
+      background: url("../i/popup-promo/popup-button.svg") no-repeat center;
       background-size: 100% auto;
       transition: transform .35s;
       backface-visibility: hidden;
     }
 
     &:hover{
+      color: #fff;
+
       &:before{
         transform: scale(1.03);
       }
@@ -1164,7 +1172,7 @@ a {
     top: -6vw;
     width: 46.64vw;
     height: 34.92vw;
-    background: url("../i/promo-code-pics.png") no-repeat center;
+    background: url("../i/popup-promo/promo-code-pics.png") no-repeat center;
     background-size: 100% auto;
   }
 
@@ -1268,7 +1276,7 @@ a {
   font-size: 0;
   line-height: 0;
   width: 22.266vw;
-  height: 8.28vw;
+  height: 8.95vw;
   background: url("../i/map-title.png") no-repeat;
   background-size: 100% auto;
   position: absolute;
@@ -1418,6 +1426,1037 @@ a {
   }
 }
 
+.b-section-carousel{
+  height: $sectionHeight;
+  margin: 2.5% 0;
+  background: url("../i/section-carousel/carousel-bg.jpg") no-repeat center bottom;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transition: .45s .3s;
+}
+
+.b-section-carousel__title{
+  position: absolute;
+  top: 2.1857vw;
+  left: 4.53vw;
+  width: 18.75vw;
+  height: 10.08vw;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  background: url("../i/section-carousel/carousel-title.png") no-repeat center;
+  background-size: 100% auto;
+}
+
+.b-heroes-carousel{
+  position: relative;
+  //width: 62.5vw;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  overflow: visible !important;
+  z-index: 1;
+  top: 8vw;
+}
+
+.b-heroes-carousel__item{
+  width: 15.625vw;
+  height: 27.27vw;
+  z-index: 1;
+
+  .b-heroes-carousel__pic{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4vw;
+    top: 0;
+    transform: scale(.6);
+    transform-origin: center bottom;
+    transition: .35s;
+    z-index: 1;
+
+    img{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &.active{
+    .b-heroes-carousel__pic{
+      transform: scale(1);
+    }
+
+    .b-heroes-carousel__text{
+      opacity: 1;
+      transition: opacity .35s .35s;
+    }
+  }
+
+  .b-heroes-carousel__text{
+    position: absolute;
+    left: 80%;
+    bottom: 60%;
+    width: 37.5vw;
+    height: 15vw;
+    background: url("../i/section-carousel/carousel-heroes-cloud.svg") no-repeat center;
+    background-size: 100% auto;
+    z-index: 2;
+    opacity: 0;
+    backface-visibility: hidden;
+
+    .b-heroes-carousel__text-wrapper{
+      position: relative;
+      font-family: $OutofLineBB_italic;
+      font-size: $fs13;
+      line-height: $lh17;
+      margin: 2vw 3vw 0 5vw;
+
+      p{
+        margin-bottom: .3vw;
+        i{
+          font-family: $OutofLineBB_italicBold;
+          line-height: $lh19;
+        }
+      }
+
+
+      h6{
+        display: inline-block;
+        vertical-align: top;
+        font-family: $FirenightRegular;
+        font-weight: bold;
+        font-style: italic;
+        color: #fff;
+        font-size: $fs21;
+        line-height: $lh30;
+        margin-right: 20px;
+        margin-bottom: .7vw;
+        margin-left: 10px;
+        position: relative;
+        letter-spacing: .05em;
+        transform: rotate(-1.7deg);
+
+        &:before{
+          content: "";
+          position: absolute;
+          z-index: 1;
+          background: $redColor2;
+          top: -2px;
+          bottom: 0;
+          left: -10px;
+          right: -10px;
+          transform: skew(-15deg);
+          border-radius: .4vw;
+        }
+
+        span{
+          z-index: 2;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+.b-section-carousel__count{
+  display: none;
+}
+
+.b-section-comics{
+  height: $sectionHeight;
+  margin: 2.5% 0;
+  position: relative;
+
+  &.active-section{
+    .b-comics__hero-text{
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .b-comics{
+    float: left;
+    vertical-align: top;
+    position: relative;
+    height: 100%;
+    width: 48.75%;
+
+    &.b-comics_1{
+      margin-right: 2.5%;
+      background: url("../i/section-download/bg-1.jpg") no-repeat center;
+      background-size: cover;
+    }
+    &.b-comics_3{
+      margin-right: 2.5%;
+      background: url("../i/section-barter/bg-1.jpg") no-repeat center;
+      background-size: cover;
+      z-index: 2;
+    }
+    &.b-comics_2{
+      background: url("../i/section-download/bg-2.jpg") no-repeat center;
+      background-size: cover;
+    }
+    &.b-comics_4{
+      background: url("../i/section-barter/bg-2.jpg") no-repeat left bottom;
+      background-size: cover;
+    }
+  }
+}
+
+.b-comics__hero{
+  position: absolute;
+
+  .b-comics__hero-text{
+    position: absolute;
+    font-size: $fs18;
+    line-height: $lh24;
+    transform: scale(0);
+    opacity: 0;
+
+    p{
+      text-align: center;
+
+      .b-link{
+        position: relative;
+
+        &:hover{
+          &:before{
+            background: $regularColor;
+          }
+        }
+        &:before{
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: -1px;
+          right: -1px;
+          height: 1px;
+          background: $redColor;
+          transition: background .25s;
+        }
+      }
+    }
+  }
+  
+  &.b-comics__hero-1{
+    width: 9.53vw;
+    height: 17.11vw;
+    background: url("../i/section-download/hero-1.png") no-repeat center;
+    background-size: 100% auto;
+    left: 6vw;
+    bottom: 6.8vw;
+
+    .b-comics__hero-text{
+      right: -7%;
+      bottom: 86%;
+      width: 16vw;
+      height: 9vw;
+      background: url("../i/section-download/text-cloud-1.svg") no-repeat center;
+      background-size: 100% auto;
+      transition: transform .35s, opacity .35s;
+
+      p{
+        margin: 2.1vw 0 0;
+        transform: rotate(-9deg);
+      }
+    }
+  }
+  
+  &.b-comics__hero-2{
+    width: 11.48vw;
+    height: 17.89vw;
+    background: url("../i/section-download/hero-2.png") no-repeat center;
+    background-size: 100% auto;
+    right: 4.2vw;
+    bottom: 1.5vw;
+
+    .b-comics__hero-text{
+      right: 55%;
+      bottom: 86%;
+      width: 13.5vw;
+      height: 14.8vw;
+      background: url("../i/section-download/text-cloud-2.svg") no-repeat center;
+      background-size: 100% auto;
+      transition: transform .35s .25s, opacity .35s .25s;
+
+      p{
+        margin: 1.3vw 0 0;
+      }
+    }
+  }
+
+  &.b-comics__hero-3{
+    width: 9.53vw;
+    height: 19.77vw;
+    right: -.8vw;
+    bottom: -2vw;
+    background: url("../i/heroes-carousel/9-cat.png") no-repeat;
+    background-size: 100% auto;
+
+    .b-comics__hero-text{
+      right: 68%;
+      bottom: 45%;
+      width: 19vw;
+      height: 31vw;
+      background: url("../i/section-download/text-cloud-3.svg") no-repeat center;
+      background-size: 100% auto;
+      font-size: 1.20625vw;
+      line-height: 1.675vw;
+      transition: transform .35s .5s, opacity .35s .5s;
+
+      p{
+        position: absolute;
+        bottom: 2.6vw;
+        right: 0;
+        margin: 0 3.4vw 0 1vw;
+      }
+    }
+  }
+
+  &.b-comics__hero-4{
+    width: 7.89vw;
+    height: 14.375vw;
+    left: 10vw;
+    bottom: 9vw;
+
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("../i/heroes-carousel/21-pig-girl.png") no-repeat;
+      background-size: 100% auto;
+      transform: rotateY(180deg);
+    }
+
+    .b-comics__hero-text{
+      left: 85%;
+      bottom: 85%;
+      width: 13.3vw;
+      height: 10.92vw;
+      background: url("../i/section-barter/text-cloud-1.svg") no-repeat center;
+      background-size: 100% auto;
+      font-size: $fs15;
+      line-height: $lh24;
+      transition: transform .35s, opacity .35s;
+
+      p{
+        position: absolute;
+        bottom: 3.8vw;
+        right: 0;
+        margin: 0 1vw 0 1vw;
+      }
+    }
+  }
+
+  &.b-comics__hero-5{
+    width: 10.78vw;
+    height: 16.55vw;
+    right: 4vw;
+    bottom: 0;
+    background: url("../i/heroes-carousel/8-rabbit.png") no-repeat;
+    background-size: 100% auto;
+
+    .b-comics__hero-text{
+      left: 15%;
+      bottom: 85%;
+      width: 18.67vw;
+      height: 14.84vw;
+      background: url("../i/section-barter/text-cloud-2.svg") no-repeat center;
+      background-size: 100% auto;
+      font-size: $fs15;
+      line-height: $lh24;
+      transition: transform .35s .25s, opacity .35s .25s;
+
+      p{
+        position: absolute;
+        top: 3vw;
+        right: 0;
+        margin: 0 2vw;
+      }
+    }
+  }
+
+  &.b-comics__hero-6 {
+    width: 6.48vw;
+    height: 13.98vw;
+    left: 13vw;
+    bottom: 7.53vw;
+    background: url("../i/heroes-carousel/16-sheep.png") no-repeat;
+    background-size: 100% auto;
+    opacity: .83;
+  }
+
+  &.b-comics__hero-7{
+    width: 11.3vw;
+    height: 23.7vw;
+    left: 2.1vw;
+    bottom: -1vw;
+    background: url("../i/section-barter/hero-1_back.svg") no-repeat;
+    background-size: 100% auto;
+  }
+
+  &.b-comics__hero-8{
+    width: 8.36vw;
+    height: 16.41vw;
+    right: 5.4vw;
+    bottom: 0;
+    background: url("../i/heroes-carousel/4-frog.png") no-repeat;
+    background-size: 100% auto;
+
+    .b-comics__hero-text{
+      right: 73%;
+      bottom: 68%;
+      width: 15vw;
+      height: 13.3vw;
+      background: url("../i/section-barter/text-cloud-3.svg") no-repeat center;
+      background-size: 100% auto;
+      font-size: $fs15;
+      line-height: $lh24;
+      transition: transform .35s .5s, opacity .35s .5s;
+
+      p{
+        position: absolute;
+        top: 3vw;
+        right: .4vw;
+        margin: 0 2vw 0 1vw;
+      }
+    }
+  }
+}
+
+.b-comics__phone{
+  position: absolute;
+  width: 40vw;
+  height: 40vw;
+  left: -8vw;
+  bottom: -2vw;
+  background: url("../i/section-download/iphone.png") no-repeat;
+  background-size: 100% auto;
+
+  div{
+    position: absolute;
+    width: 13.43vw;
+    height: 23.7vw;
+    left: 13.3vw;
+    top: 8.1vw;
+    background: url("../i/section-download/phone-bg-1.jpg") no-repeat center;
+    background-size: cover;
+  }
+}
+
+.b-comics__button-gp{
+  position: absolute;
+  bottom: 45%;
+  right: 30%;
+  width: 8vw;
+  height: 3vw;
+  background: url("../i/ico-gplay.svg") no-repeat center;
+  background-size: 100% auto;
+  transform: rotate(-2deg);
+}
+
+.b-comics__button-appstore{
+  position: absolute;
+  bottom: 74%;
+  right: 42%;
+  width: 8vw;
+  height: 3vw;
+  background: url("../i/ico-appstore.svg") no-repeat center;
+  background-size: 100% auto;
+  transform: rotate(-2deg);
+}
+
+.b-menu-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: $overlayBG;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .45s .25s, visibility .7s 0s;
+
+  &.open{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .25s, visibility 0s;
+
+    .b-menu-box{
+      transform: translate(0, 0);
+      transition: transform .45s .25s;
+    }
+  }
+}
+
+.b-menu-box{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 22.65625vw+2.58vw;
+  z-index: 101;
+  transform: translate(200%, 0);
+  transition: transform .45s 0s;
+
+  .b-menu-box__wrapper-hidden{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-left: 2.58vw;
+    overflow-x: hidden;
+    z-index: 2;
+  }
+
+  .b-menu-box__wrapper{
+    position: relative;
+    min-height: 100%;
+    background: $yellowColor;
+    text-align: center;
+    padding-top: 2.97vw;
+    z-index: 4;
+  }
+
+  .b-menu-box__border{
+    content: "";
+    position: absolute;
+    right: 100%;
+    top:0;
+    width: 0;
+    height: 0;
+    border-right: 2.58vw solid $yellowColor ;
+    border-bottom: 336px solid transparent;
+  }
+
+  .b-menu__close{
+    position: absolute;
+    z-index: 3;
+    width: 2.65625vw;
+    height: 2.65625vw;
+    background: url("../i/i-menu-burger-close.svg") no-repeat center;
+    background-size: 100% auto;
+    top: 2.89vw;
+    right: 2.65625vw;
+    transition: transform .25s;
+
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+}
+
+.b-menu__title{
+  font-family: $FirenightRegular;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: .05em;
+  font-size: $fs32;
+  line-height: $lh37;
+  transform: rotate(-1.7deg);
+  display: block;
+  position: relative;
+  margin-bottom: 6.25vw;
+}
+
+.b-menu{
+  font-family: $FirenightRegular;
+  font-weight: bold;
+  font-style: italic;
+  font-size: $fs21;
+  line-height: $lh37;
+  margin-bottom: 5.55vw;
+
+  li{
+    margin: 0.3125vw;
+  }
+
+  .b-menu__link{
+    color: $redColor;
+
+    &.active{
+      cursor: default;
+      color: $regularColor !important;
+    }
+
+    &:hover{
+      color: $regularColor;
+    }
+  }
+}
+
+.b-menu-box__hero{
+  position: absolute;
+  width: 27.34375vw;
+  height: 37.8125vw;
+  right: 25.23625vw * .5;
+  top: 6.17vw;
+
+  &.b-menu-box__hero_bottom{
+    background: url("../i/menu-hero-bottom.png") no-repeat center;
+    background-size: auto 100% ;
+    z-index: 1;
+  }
+
+  &.b-menu-box__hero_top{
+    background: url("../i/menu-hero-top.png") no-repeat 6vw center;
+    background-size: auto 100%;
+    z-index: 3;
+    margin-right: 6vw;
+  }
+}
+
+.b-menu__button{
+  display: block;
+  width: 17.34vw;
+  height: 5.86vw;
+  font-family: $FirenightRegular;
+  font-weight: bold;
+  font-style: italic;
+  font-size: $lh24;
+  line-height: 5.86vw;
+  color: #fff;
+  position: relative;
+  margin: 0 auto 3vw;
+
+  &:hover{
+    color: #fff;
+    &:before{
+      transform: scale(1.03);
+    }
+  }
+
+  span{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    z-index: 2;
+    transform: rotate(-2.7deg);
+  }
+
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../i/menu-button-bg.svg") no-repeat center;
+    background-size: 100% auto;
+    transition: transform .35s;
+    backface-visibility: hidden;
+    z-index: 1;
+  }
+}
+
+.b-menu-box__download{
+  position: relative;
+  font-family: $OutofLineBB_italicBold;
+  padding-bottom: 4vw;
+
+  li{
+    margin: 0.47vw 0;
+  }
+
+  a{
+    color: $regularColor;
+
+    &:hover{
+      color: $redColor;
+    }
+  }
+}
+
+.b-footer{
+  position: relative;
+  height: $sectionHeight;
+  background: url("../i/footer/footer-bg.jpg") no-repeat center 20%;
+  background-size: cover;
+  margin: 2.5% 0;
+}
+
+.b-footer-menu{
+  position: relative;
+  z-index: 2;
+  padding-top: 6.09vw;
+  margin: 0 4.6875vw - 0.74vw * 2;
+
+  li{
+    float: left;
+    vertical-align: top;
+    margin: 0 0.74vw;
+
+    &:nth-child(3){
+      &~li{
+        float: right;
+      }
+    }
+  }
+
+  .b-footer-menu__link{
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    transition: transform .25s;
+    backface-visibility: hidden;
+
+    &:hover{
+      transform: scale(1.05);
+    }
+
+    &.b-footer-menu__link_1{
+      width: 13.05vw;
+      height: 1.29vw;
+      background-image: url("../i/footer/menu-1.png");
+    }
+    &.b-footer-menu__link_2{
+      width: 7.07vw;
+      height: 1.33vw;
+      background-image: url("../i/footer/menu-2.png");
+    }
+    &.b-footer-menu__link_3{
+      width: 3.91vw;
+      height: 1.29vw;
+      background-image: url("../i/footer/menu-3.png");
+    }
+    &.b-footer-menu__link_4{
+      width: 4.26vw;
+      height: 1.29vw;
+      background-image: url("../i/footer/menu-4.png");
+    }
+    &.b-footer-menu__link_5{
+      width: 11.21vw;
+      height: 1.41vw;
+      background-image: url("../i/footer/menu-5.png");
+    }
+    &.b-footer-menu__link_6{
+      width: 6.09vw;
+      height: 1.33vw;
+      background-image: url("../i/footer/menu-6.png");
+    }
+  }
+}
+
+.b-footer__logo{
+  width: 21.95vw;
+  height: 10.23vw;
+  position: absolute;
+  left: 50%;
+  top: 1.09vw;
+  transform: translate(-50%,0);
+  background: url("../i/product-logo.svg") no-repeat center;
+  background-size: 100% auto;
+  margin-left: 1.4vw;
+}
+
+.b-footer__text{
+  position: absolute;
+  margin: auto;
+  width: 74.45vw;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: $fs15;
+  line-height: $lh24;
+  text-align: center;
+}
+
+.b-footer__app{
+  position: absolute;
+  left: 50%;
+  bottom: 4vw;
+  transform: translate(-50%, 0);
+
+  li{
+    float: left;
+    vertical-align: top;
+    margin: 0 0.7vw;
+  }
+
+  .b-footer__app-link{
+    display: block;
+    position: relative;
+    width: 14.0625vw;
+    height: 5.47vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    
+    &.b-footer__app-link_appstore{
+      background-image: url("../i/ico-appstore.svg");
+    }
+    &.b-footer__app-link_gp{
+      background-image: url("../i/ico-gplay.svg");
+      margin-top: -.5vw;
+    }
+  }
+}
+
+.b-footer__scroll-top{
+  position: absolute;
+  right: 2.8vw;
+  bottom: 2.8vw;
+  width: 5.86vw;
+  height: 5.86vw;
+  background: url("../i/footer/ico-top.svg") no-repeat center;
+  background-size: 100% auto;
+}
+
+.b-section-products{
+  position: relative;
+  margin: 2.5% 0;
+  height: $sectionHeight;
+  background: #21708e;
+
+  .b-section-products__content{
+    position: absolute;
+    left: 0;
+    top: 10%;
+    bottom: 10%;
+    right: 10%;
+    z-index: 10;
+  }
+}
+
+.b-section-play{
+  position: relative;
+  margin: 2.5% 0;
+  height: 39.0625vw;
+
+  &.active-section{
+    .b-section-play__cloud{
+      opacity: 1;
+      transform: translate(-50%,-50%) scale(1);
+    }
+  }
+}
+
+.b-section-play__bg-wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.b-section-play__bg-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.b-section-play__bg{
+  position: absolute !important;
+  left: -5% !important;
+  right: -3%;
+  top: -4% !important;
+  bottom: -4%;
+  background: url("../i/section-play/play-map.jpg") no-repeat center 72%;
+  background-size: 100% auto;
+  transition: transform .3s linear;
+}
+
+.b-section-play__bg-top_wrapper{
+  left: -1px;
+  right: 1px;
+  height: 100%;
+  bottom: 31.4vw;
+  position: absolute;
+  overflow: hidden;
+
+  .b-section-play__bg-top{
+    position: absolute !important;
+    left: -5% !important;
+    right: -3%;
+    top: -4% !important;
+    bottom: -4%;
+    background: url("../i/section-play/play-map-top.png") no-repeat center top;
+    background-size: 100% auto;
+    transition: transform .3s linear;
+  }
+}
+
+.b-section-play__content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+
+  .b-section-play__title{
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    top: 2.1857vw;
+    left: 4.53vw;
+    width: 18.16vw;
+    height: 7.31vw;
+    background: url("../i/section-play/section-title.png") no-repeat center;
+    background-size: 100% auto;
+  }
+}
+
+.b-section-play__numbers-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+
+.b-section-play__numbers{
+  position: absolute;
+  width: 4.22vw;
+  height: 4.22vw;
+  text-align: center;
+  color: #fff !important;
+  line-height: 4.22vw;
+  font-family: $OutofLineBB_bold;
+  font-size: $fs27;
+
+  &:hover{
+    &:before{
+      transform: scale(1.1);
+    }
+  }
+
+  &.active{
+    color: $regularColor !important;
+    cursor: default;
+
+    &:before{
+      background-image: url("../i/section-play/play-number-active.svg");
+      transform: none !important;
+    }
+  }
+
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: url("../i/section-play/play-number.svg") no-repeat center;
+    background-size: 100% auto;
+    transition: transform .25s;
+    backface-visibility: hidden;
+  }
+
+  span{
+    position: relative;
+    display: block;
+    z-index: 2;
+  }
+
+  &:nth-child(1){
+    left: 7vw;
+    bottom: 2vw;
+  }
+  &:nth-child(2){
+    left: 25.2vw;
+    bottom: .5vw;
+  }
+  &:nth-child(3){
+    left: 29vw;
+    bottom: 18.5vw;
+  }
+  &:nth-child(4){
+    left: 11vw;
+    bottom: 16.5vw;
+  }
+  &:nth-child(5){
+    left: 24vw;
+    top: 3vw;
+  }
+  &:nth-child(6){
+    left: 56vw;
+    top: 4vw;
+  }
+  &:nth-child(7){
+    left: 51vw;
+    bottom: 9.5vw;
+  }
+  &:nth-child(8){
+    right: 6.3vw;
+    top: 3vw;
+  }
+  &:nth-child(9){
+    right: 5vw;
+    bottom: 11vw;
+  }
+  &:nth-child(10){
+    right: 23vw;
+    bottom: .5vw;
+  }
+}
+
+.b-section-play__cloud{
+  position: absolute;
+  left: 52%;
+  top: 43%;
+  transform: translate(-50%,-50%) scale(0);
+  width: 30.86vw;
+  height: 16.95vw;
+  background: url("../i/section-play/play-cloud.svg") no-repeat center;
+  background-size: 100% auto;
+  z-index: 5;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 1.5625vw;
+  line-height: 1.95vw;
+  padding: 3vw 3vw 0;
+  opacity: 0;
+  transition: transform .35s, opacity .35s;
+  backface-visibility: hidden;
+
+  &.hero-text{
+    padding-top: 2.3vw;
+    font-size: 1.1vw;
+    line-height: 1.45vw;
+  }
+
+  h6{
+    font-family: $OutofLineBB_bold;
+    font-size: $fs18;
+    line-height: $lh24;
+    margin-bottom: .55vw;
+
+    a{
+      position: relative;
+      border-bottom: 1px solid $redColor;
+      transition: color .25s, border-color .25s;
+
+      &:hover{
+        border-bottom-color: $regularColor;
+      }
+    }
+  }
+}
+
 @include placeholder(rgba(41,39,39, .5), $OutofLineBB, '.b-input', 2.6vw - 0.625vw);
 @include placeholder(#aba0a0, $OutofLineBB, '.b-shops-choose .b-input', 2.6vw - 0.625vw);
 
@@ -1499,6 +2538,8 @@ a {
 
   .b-burger{
     width: 16vw;
+    height: 16vw;
+    top: 9vw;
 
     &:before{
       width: 50%;
@@ -1530,6 +2571,7 @@ a {
     bottom: 0;
     background-position: 90% 40%;
     background-size: 205% auto;
+    transform: none !important;
   }
 
   .b-section-top__buildings{
@@ -1546,7 +2588,7 @@ a {
   }
 
   .b-section-top__hero-cloud{
-    font-size: 2.66vw;
+    font-size: $fs14_mob;
     line-height: 4.52vw;
   }
 
@@ -1576,21 +2618,21 @@ a {
       bottom: 8%;
 
       .b-section-top__hero-cloud{
-        background-image: url("../i/top-hero-3_cloud_mob.svg");
+        background-image: url("../i/section-top/top-hero-3_cloud_mob.svg");
         width: 24.2vw;
         height: 26.4vw;
         right: auto;
         left: 25%;
         bottom: 105%;
-        font-size: 1.85vw;
-        line-height: 2.4vw;
-        padding: 8vw 2vw 0;
+        font-size: $fs9_mob;
+        line-height: $fs14_mob;
+        padding: 7.2vw 2vw 0;
       }
     }
     &.b-section-top__hero_4{
       width: 36.64vw;
       height: 47.87vw;
-      background: url("../i/top-hero-4_flip.svg") no-repeat center;
+      background: url("../i/section-top/top-hero-4_flip.svg") no-repeat center;
       left: 31% !important;
 
       .b-section-top__hero-cloud{
@@ -1610,9 +2652,9 @@ a {
       .b-section-top__hero-cloud{
         width: 19.95vw;
         height: 22.34vw;
-        font-size: 1.85vw;
-        line-height: 2.4vw;
-        padding-top: 2.5vw;
+        font-size: 2.2vw;
+        line-height: 3.2vw;
+        padding-top: 1.3vw;
         right: 40%;
         bottom: 93%;
       }
@@ -1745,7 +2787,7 @@ a {
       width: 104%;
       padding: 0 5.33vw - 0.8vw;
       font-size: 3.73vw;
-      line-height: 8.4vw + 0.93vw;
+      line-height: 8.4vw + 0.93vw - 1.6vw;
       border-radius: 6vw;
       border-width: .8vw;
     }
@@ -1786,7 +2828,7 @@ a {
 
   .b-promo-form__error{
     transform: translate(-50%, 0) scale(0);
-    background: url("../i/popup-error-bg_mob.svg") no-repeat center;
+    background: url("../i/popup-promo/popup-error-bg_mob.svg") no-repeat center;
     width: 83.73vw;
     height: 40.8vw;
     left: 50%;
@@ -1808,7 +2850,7 @@ a {
     }
 
     &:before{
-      background-image: url("../i/promo-code-pics__mob.png");
+      background-image: url("../i/popup-promo/promo-code-pics__mob.png");
       width: 100vw;
       height: 73vw;
       left: 50%;
@@ -1824,5 +2866,584 @@ a {
     margin-top: 3vw;
   }
 
+  .b-section-map{
+    height: 216vw;
+    margin: 4% 0;
+  }
+
+  .b-tooltip-init{
+    width: 60vw;
+    font-size: $fs14_mob;
+    line-height: $lh24_mob;
+    padding: 5vw;
+
+    .close{
+      width: 10vw;
+      height: 10vw;
+      font-size: 13vw;
+      line-height: 10vw;
+    }
+
+    p{
+      max-width: 50vw;
+      margin-bottom: 3vw;
+    }
+
+    span{
+      font-size: $fs14_mob - 1vw;
+      line-height: $lh24_mob - 2vw;
+    }
+  }
+
+  .b-shops-choose{
+    left: 50%;
+    top: 25.3vw;
+    transform: translate(-50%,0);
+    width: 81.6vw;
+    margin-left: -1.6vw;
+
+    &:before{
+      border-left-width: 81.6vw;
+      border-bottom-width: 4.53vw;
+    }
+
+    &:after{
+      border-right-width: 81.6vw;
+      border-top-width: 2.4vw;
+    }
+
+    .b-shops-choose__border{
+      top: -4.54vw;
+      border-left-width: 3.2vw;
+    }
+  }
+
+  .b-shops-choose__title{
+    width: 63vw;
+    height: 25vw;
+    margin-bottom: -5vw;
+    background-image: url("../i/map-title_ mob.png");
+  }
+
+  .b-dropdown__box{
+    margin-bottom: 3vw;
+  }
+
+  .b-shops-choose {
+    .b-shops-choose__wrapper{
+      padding: 9.87vw 9.3vw 6.4vw 10.93vw;
+    }
+
+    .b-input__box .b-input{
+      margin-top: 0;
+      margin-left: 0;
+      width: 100%;
+      font-size: $fs14_mob;
+    }
+  }
+
+  .b-section-carousel{
+    height: 210.7vw;
+    margin: 4% 0;
+  }
+
+  .b-section-carousel__title{
+    background-image: url("../i/section-carousel/carousel-title_mob.png");
+    width: 64vw;
+    height: 34.7vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 3.47vw;
+  }
+
+  .b-heroes-carousel{
+    padding-top: 46.13vw;
+    width: 100%;
+    top: 0;
+    box-sizing: border-box;
+
+    .slick-list,
+    .slick-track{
+      height: 100%;
+    }
+
+    .slick-arrow{
+      position: absolute;
+      bottom: 25%;
+      width: 9.1vw;
+      height: 16vw;
+      border: none;
+      outline: none;
+      font-size: 0;
+      line-height: 0;
+      color: transparent;
+      background: url("../i/section-carousel/carousel-heroes-arrow.svg") no-repeat center;
+      background-size: 100% auto;
+      z-index: 10;
+
+      &.slick-prev{
+        left: 2vw;
+
+      }
+      &.slick-next{
+        right: 2vw;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  .b-heroes-carousel__item{
+    height: 100%;
+    position: relative;
+    opacity: 1;
+
+    .b-heroes-carousel__text{
+      width: 87.73vw;
+      height: 74.4vw;
+      background-image: url("../i/section-carousel/carousel-heroes-cloud_mob.svg");
+      left: 50%;
+      bottom: auto;
+      top: 0;
+      transform: translate(-50%, 0);
+      transition: opacity .25s;
+
+      .b-heroes-carousel__text-wrapper{
+        font-size: 3vw;
+        line-height: 4vw;
+        max-height: none;
+        margin: 9vw 11vw 0 11vw;
+
+        p{
+          margin-bottom: 1vw;
+        }
+
+        h6{
+          font-size: $fs21_mob;
+          line-height: $lh30_mob;
+          margin-bottom: 2vw;
+
+          &:before{
+            border-radius: 1.4vw;
+          }
+        }
+      }
+    }
+
+    &.slick-active{
+      .b-heroes-carousel__text{
+        opacity: 1;
+        transition: opacity .25s .35s;
+      }
+    }
+  }
+
+  .b-section-carousel__count{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50% ,0) rotate(-2.7deg);
+    bottom: 5.3vw;
+    font-family: $FirenightRegular;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    z-index: 4;
+    font-size: 5.87vw;
+    line-height: 9.87vw;
+
+    &:before{
+      content: "";
+      position: absolute;
+      z-index: 1;
+      background: #ed1b23;
+      top: -2px;
+      bottom: 0;
+      left: -10px;
+      right: -10px;
+      transform: skew(-15deg);
+      border-radius: 1.4vw;
+    }
+
+    div{
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .b-section-comics{
+    height: auto;
+    margin: 4% 0;
+
+    .b-comics{
+      height: 70vw;
+      width: 100%;
+
+      &.b-comics_1,
+      &.b-comics_3{
+        margin: 0 0 4%;
+      }
+    }
+  }
+
+  .b-comics__hero{
+
+    .b-comics__hero-text{
+      font-size: $fs12_mob;
+      line-height: $fs15_mob;
+    }
+
+    &.b-comics__hero-1{
+      width: 14.9vw;
+      height: 26.7vw;
+      left: 15vw;
+      bottom: 13vw;
+
+      .b-comics__hero-text{
+        width: 38vw;
+        height: 21vw;
+        right: -65%;
+        bottom: 80%;
+
+        p{
+          margin: 5vw 4.5vw 0;
+        }
+      }
+    }
+
+    &.b-comics__hero-2{
+      width: 21.3vw;
+      height: 33.1vw;
+      bottom: 3vw;
+
+      .b-comics__hero-text{
+        right: 49%;
+        bottom: 77%;
+        width: 31vw;
+        height: 34.8vw;
+
+        p{
+          margin: 4vw 0 0;
+        }
+      }
+    }
+
+    &.b-comics__hero-3{
+      right: auto;
+      left: 10.7vw;
+      bottom: -4vw;
+      width: 20.5vw;
+      height: 42.4vw;
+      background: none;
+
+      &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../i/heroes-carousel/9-cat.png") no-repeat;
+        background-size: 100% auto;
+        transform: rotateY(180deg);
+      }
+
+      .b-comics__hero-text{
+        right: auto;
+        left: 60%;
+        width: 33vw;
+        height: 63vw;
+        bottom: 90%;
+        background-image: url("../i/section-download/text-cloud-3_mob.svg");
+        font-size: $fs9_mob;
+        line-height: 3.47vw;
+
+        p{
+          bottom: 7vw;
+          margin: 0 3vw 0 4vw;
+        }
+      }
+    }
+
+    &.b-comics__hero-4{
+      width: 15.47vw;
+      height: 28.27vw;
+      left: 20vw;
+      bottom: 18vw;
+
+      .b-comics__hero-text{
+        width: 32.3vw;
+        height: 25.92vw;
+        font-size: 2.9vw;
+        line-height: $fs15_mob;
+
+        p{
+          bottom: 9.8vw;
+          margin: 0 2.5vw;
+        }
+      }
+    }
+
+    &.b-comics__hero-5{
+      width: 23vw;
+      height: 35.47vw;
+      right: -3vw;
+      bottom: -2vw;
+
+      .b-comics__hero-text{
+        background-image: url("../i/section-barter/text-cloud-2_mob.svg");
+        width: 45.8vw;
+        height: 28.8vw;
+        font-size: 2.9vw;
+        line-height: $fs15_mob;
+        right: 57%;
+        left: auto;
+        bottom: 54%;
+
+        p{
+          top: 7vw;
+          margin: 0 5vw 0 2vw;
+        }
+      }
+    }
+
+    &.b-comics__hero-6{
+      width: 12.53vw;
+      height: 27.2vw;
+      left: 25.5vw;
+      bottom: 14.7vw;
+    }
+
+    &.b-comics__hero-7{
+      width: 21vw;
+      height: 44vw;
+      left: 5.1vw;
+      bottom: 1vw;
+    }
+
+    &.b-comics__hero-8{
+      width: 18.8vw;
+      height: 32.8vw;
+      right: -2.6vw;
+      bottom: -7px;
+
+      .b-comics__hero-text{
+        right: 80%;
+        bottom: 56%;
+        width: 35vw;
+        height: 32.3vw;
+        font-size: 2.9vw;
+        line-height: $fs15_mob;
+
+        p{
+          top: 8.2vw;
+          right: .4vw;
+          margin: 0 5vw 0 3vw;
+          backface-visibility: hidden;
+        }
+      }
+    }
+
+
+  }
+
+  .b-comics__phone{
+    left: auto;
+    width: 75vw;
+    height: 75vw;
+    right: -17vw;
+    bottom: -5vw;
+
+    div{
+      width: 25vw;
+      height: 44.4vw;
+      left: 25.2vw;
+      top: 15.3vw;
+    }
+  }
+
+  .b-comics__phone-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+  .b-comics__button-gp,
+  .b-comics__button-appstore{
+    width: 16vw;
+    height: 6.6vw;
+  }
+  .b-comics__button-gp{
+    bottom: 47%;
+    right: 32%;
+  }
+  .b-comics__button-appstore{
+    bottom: 75.6%;
+    right: 17%;
+  }
+
+  .b-menu-box{
+    width: 80vw;
+
+    .b-menu-box__wrapper-hidden{
+      padding-left: 10vw;
+    }
+
+    .b-menu-box__border{
+      border-right-width: 10vw;
+    }
+
+    .b-menu__close{
+      width: 7vw;
+      height: 7vw;
+      top: 7vw;
+      right: 4vw;
+    }
+
+    .b-menu-box__wrapper{
+      padding-top: 5.5vw;
+    }
+  }
+
+  .b-menu__title{
+    font-size: 7.6vw;
+    line-height: 12vw;
+    margin-bottom: 10vw;
+  }
+
+  .b-menu-box__hero{
+    width: 52vw;
+    height: 71vw;
+    right: 54.6vw;
+    top: 6.17vw;
+  }
+
+  .b-menu{
+    font-size: $fs15_mob;
+    line-height: $lh24_mob;
+    margin-bottom: 10vw;
+
+    li{
+      margin: 2vw 0;
+    }
+  }
+
+  .b-menu__button{
+    width: 50vw;
+    height: 18vw;
+    line-height: 18vw;
+    font-size: $fs21_mob;
+    margin-bottom: 10vw;
+  }
+
+  .b-menu-box__download{
+    font-size: $fs12_mob;
+    line-height: $fs21_mob;
+  }
+
+  .b-footer{
+    margin: 4% 0;
+    height: auto;
+    padding: 40.53% 0 8vw;
+    background: #4f8dca;
+
+    *{
+      z-index: 3;
+    }
+
+    &:before{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      bottom: 0;
+      background: url("../i/footer/footer-bg.jpg") no-repeat center 30%;
+      background-size: 400% auto;
+      z-index: 1;
+    }
+
+    &:after{
+      content: "";
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 10%;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4f8dca+0,4f8dca+100&1+0,0+100 */
+      background: -moz-linear-gradient(top, rgba(79,141,202,1) 0%, rgba(79,141,202,0) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(79,141,202,1) 0%,rgba(79,141,202,0) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(79,141,202,1) 0%,rgba(79,141,202,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f8dca', endColorstr='#004f8dca',GradientType=0 ); /* IE6-9 */
+    }
+
+  }
+
+  .b-footer__logo{
+    width: 61.6vw;
+    height: 28.53vw;
+    top: 3.47vw;
+    margin-left: 0;
+  }
+
+  .b-footer__text{
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    font-size: $fs15_mob;
+    line-height: $lh24_mob;
+    width: 78.7vw;
+    margin: 4vw auto 16vw;
+  }
+
+  .b-footer-menu{
+    padding-top: 0;
+    margin-bottom: 7.17vw;
+
+    li{
+      float: none !important;
+      position: relative;
+      margin: 3.5vw 0;
+    }
+
+    .b-footer-menu__link{
+      margin: auto;
+      height: 5.4vw !important;
+      width: 100% !important;
+      background-size: auto 100% !important;
+      transform: none !important;
+    }
+
+  }
+
+  .b-footer__app{
+    position: relative;
+    left: 0;
+    bottom: auto;
+    transform: none;
+    text-align: center;
+
+    li{
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 1.5vw;
+    }
+
+    .b-footer__app-link{
+      width: 39.47vw;
+      height: 15.2vw;
+    }
+  }
+
+  .b-footer__scroll-top{
+    display: none;
+  }
+
   @include placeholder(rgba(41,39,39, .5), $OutofLineBB, '.b-input', 10vw);
+  @include placeholder(#aba0a0, $OutofLineBB, '.b-shops-choose .b-input', 10vw);
 }

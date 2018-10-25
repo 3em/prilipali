@@ -16,7 +16,7 @@
   font-size: $fs18;
   line-height: $inputsHeight;
   background: #fff;
-  padding: 0 20px;
+  padding: 0 1.2501vw;
   border-radius: $inputsHeight / 2;
   transform: rotate(-.7deg);
 
@@ -166,4 +166,36 @@
   overflow: hidden;
   padding-right: 18px;
   text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 767px) {
+
+  .b-dropdown{
+    border-radius: 6vw;
+    padding: 0 4.53vw;
+    line-height: 7.73vw + 1.8vw;
+    font-size: $fs14_mob;
+
+    .b-dropdown__arrow{
+      right: 4.53vw;
+      width: 2.13vw;
+      height: 1.87vw;
+    }
+  }
+
+  .b-dropdown__sub{
+    max-height: $lh24_mob * 4 + 2;
+    border-bottom-right-radius: 6vw;
+    border-bottom-left-radius: 6vw;
+  }
+
+  .b-dropdown__item{
+    line-height: $lh24_mob;
+    padding: 0 4.53vw;
+  }
+
+  .b-dropdown__text{
+    height: 7.73vw + 1.8vw;
+  }
+
 }

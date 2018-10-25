@@ -152,6 +152,8 @@ $(function () {
    * disable address input if area dropdown empty
    */
   $('.js-input-for-select', $areasDropdown).on('change', function () {
+    $inputAddress.val('').trigger('change');
+
     if ($(this).val() == ''){
       $inputAddress.closest('.b-input__box').addClass('disabled');
     } else {
@@ -305,11 +307,13 @@ $(function () {
             }
 
             var position = this._$element.position();
-            var width = (windowWidth > 767 ) ? this._$element.outerWidth() : parseInt(windowWidth / 2);
+            // var width = this._$element.outerWidth();
+            // var height = this._$element.outerHeight();
+            var width = (windowWidth > 767 ) ? parseInt(windowWidth / 3) : 0;
             var height = (windowWidth > 767 ) ? this._$element.outerHeight() : parseInt(windowHeight / 2 +100);
 
             return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([
-              [position.left - windowWidth/3, -height], [position.left + windowWidth/3, position.top + height]
+              [position.left - width, -height], [position.left + windowWidth, position.top + height]
             ]));
           },
 

@@ -1,0 +1,20 @@
+<svg width="183px" height="108px" viewBox="0 0 183 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M39.0161071,115.100293 C33.0731134,115.100293 26.5641204,114.109794 20.338127,110.996798 C10.5746375,106.185803 3.92414458,96.8468128 3.35814519,87.0833233 C2.50914609,71.3768401 7.60314065,55.2458573 17.3666302,42.7938706 C30.9506157,25.6723889 52.3170929,16.8993983 67.174577,11.8054037 C79.6265637,7.41890839 89.3900533,5.29641066 98.7290433,4.73041126 C110.75653,4.02291202 121.652019,6.42840945 130.425009,11.522404 C133.113507,13.0789023 135.519004,14.7769005 137.500002,16.8993983 C140.659432,20.0588285 142.932687,24.0577936 144.262962,28.4986668 C144.678912,29.8872371 147.130352,33.5358626 150.033444,34.5153801 C153.42961,35.6612632 158.333706,33.6171535 158.342693,35.393953 C158.361974,39.2060628 139.742838,49.1013435 138.525631,52.9332909 C135.412635,62.5552806 112.996502,80.4670758 102.667013,89.2400664 C94.0399839,96.5466321 59.675085,112.270296 49.9115954,114.109794 C46.6570989,114.675794 42.9781029,115.100293 39.0161071,115.100293 Z" id="path-1"></path>
+        <filter x="-10.0%" y="-13.1%" width="119.9%" height="128.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.110195879 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-8-Copy-6" transform="translate(-135.000000, -3624.000000)">
+            <g id="Фигура_46_2_" transform="translate(228.504417, 3683.990047) rotate(30.000000) translate(-228.504417, -3683.990047) translate(147.504417, 3623.990047)">
+                <g id="Path" transform="translate(80.804710, 59.854739) rotate(-3.000000) translate(-80.804710, -59.854739) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
