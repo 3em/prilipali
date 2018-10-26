@@ -7,7 +7,7 @@
     <title>Веселые прилипалы 4</title>
 
     <link rel="stylesheet" href="css/jquery-ui.css" media="all">
-    <link rel="stylesheet" href="css/common.css?v2" media="all">
+    <link rel="stylesheet" href="css/common.css?v3" media="all">
 
     <script src="js/libs/jquery-3.3.1.min.js"></script>
     <script src="js/libs/jquery-ui.min.js"></script>
@@ -16,8 +16,8 @@
     <script src="js/libs/phone-mask.js"></script>
     <script src="js/libs/jquery.cloud9carousel.js"></script>
     <script src="js/libs/slick.js"></script>
-    <script src="js/main.js?v2"></script>
-    <script src="js/map.js?v2"></script>
+    <script src="js/main.js?v3"></script>
+    <script src="js/map.js?v3"></script>
 
 
 </head>
@@ -52,7 +52,7 @@
                             <a href="section-play" class="js-menu-link b-menu__link">Играть</a>
                         </li>
                         <li>
-                            <a href="section-products" class="js-menu-link b-menu__link">Товары и спонсоры</a>
+                            <a href="section-products" class="js-menu-link b-menu__link">Товары-спонсоры</a>
                         </li>
                         <li>
                             <a href="section-barter" class="js-menu-link b-menu__link">Обменять прилипал</a>
@@ -104,9 +104,9 @@
                 <div class="b-section-top__hero b-section-top__hero_1"></div>
                 <div data-id="1" data-text="0" data-depth="0.08" class="js-hero-click b-section-top__hero b-section-top__hero_click b-section-top__hero_2">
                     <a href="#" class="js-promo-code-call b-section-top__hero-cloud">
-                        Кажется,
-                        у&nbsp;тебя&nbsp;есть
-                        промокод?
+                        <div>
+                            Есть промокод? <i>Получи приз!</i>
+                        </div>
                     </a>
                 </div>
                 <div data-depth="0.2" data-friction-x=".01" data-friction-y=".01" class="b-section-top__hero b-section-top__hero_3">
@@ -117,16 +117,20 @@
                 </div>
                 <div data-id="2" data-text="0" class="js-hero-click b-section-top__hero b-section-top__hero_click b-section-top__hero_4">
                     <div class="b-section-top__hero-cloud">
-                        Получи веселого<br>
-                        прилипалу  за каждые
-                        500&nbsp;р. в&nbsp;чеке!
+                        <div>
+                            <p>
+                                <a href="section-products" class="js-scroll-to">
+                                    Получи <i>веселого<br>прилипалу</i> за&nbsp;каждые 500&nbsp;рублей в&nbsp;чеке!
+                                </a>
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div data-id="3" data-text="0" data-depth="0.05" class="js-hero-click b-section-top__hero b-section-top__hero_click b-section-top__hero_5">
                     <div class="b-section-top__hero-cloud">
-                        Просто играю
-                        в Прилипал
-                        на телефоне)
+                        <div>
+                            <p>Прилипалы-супергерои прямо <i>в&nbsp;твоем телефоне!</i></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -612,7 +616,88 @@
 
         <section id="section-products" class="js-section-nav b-section-products">
 
-            <div class="b-section-products__content"></div>
+            <div class="b-section-products__content">
+
+                <h2 class="b-section-products__title">
+                    Получи еще больше игрушек
+                </h2>
+
+                <a href="./i/section-products/Правила%20акции%20_Товары%20Прилипал_.pdf" download class="b-section-products__rules">Правила акции</a>
+
+                <ul class="u-clear-fix b-product-tabs__box">
+                    <li>
+                        <a href="#" data-type="1" class="js-product-tab-link b-product-tabs active">
+                            <span class="b-product-tabs__numbers">
+                                <span>1</span> = <span>1</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-type="2" class="js-product-tab-link b-product-tabs">
+                            <span class="b-product-tabs__numbers">
+                                <span>1</span> = <span>2</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-type="3" class="js-product-tab-link b-product-tabs">
+                            <span class="b-product-tabs__numbers">
+                                <span>2</span> = <span>1</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-type="4" class="js-product-tab-link b-product-tabs">
+                            <span class="b-product-tabs__numbers">
+                                <span>4</span> = <span>1</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+
+                <form action="http://area.php" class="js-area-form b-area-box">
+                    <span class="b-area-box__label">Ваш регион:</span>
+                    <div class="js-area-select b-dropdown__box">
+                        <div class="b-dropdown">
+                            <div class="b-dropdown__arrow"></div>
+                            <span class="b-dropdown__text js-link-stop"></span>
+                            <ul class="b-dropdown__sub">
+                                <li data-id="1" class="b-dropdown__item">ЦФО</li>
+                                <li data-id="2" class="b-dropdown__item">СЗФО</li>
+                                <li data-id="3" class="b-dropdown__item">УФО</li>
+                            </ul>
+                        </div>
+                        <input class="hidden js-input-for-select b-input" id="area" name="area" type="text">
+                    </div>
+                </form>
+
+                <div class="b-products__section">
+
+                    <div data-type="1" class="js-products-tab b-products__tab show">
+                        <div class="js-products-carousel b-products__carousel"></div>
+                    </div>
+
+                    <div data-type="2" class="js-products-tab b-products__tab">
+                        <div class="js-products-carousel b-products__carousel"></div>
+                    </div>
+
+                    <div data-type="3" class="js-products-tab b-products__tab">
+                        <div class="js-products-carousel b-products__carousel"></div>
+                    </div>
+
+                    <div data-type="4" class="js-products-tab b-products__tab">
+                        <div class="js-products-carousel b-products__carousel"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="b-section-products__cloud">
+                Элементарно!<br>
+                Больше товаров -
+                больше прилипал!
+            </div>
 
         </section>
 
@@ -629,7 +714,7 @@
 
             <div class="b-section-play__content">
                 <h2 class="b-section-play__title">Играй с прилипалами</h2>
-                <div class="b-section-play__numbers-box">
+                <div class="u-clear-fix b-section-play__numbers-box">
                     <a data-id="1" href="#" class="js-play-number b-section-play__numbers"><span>1</span></a>
                     <a data-id="2" href="#" class="js-play-number b-section-play__numbers"><span>2</span></a>
                     <a data-id="3" href="#" class="js-play-number b-section-play__numbers"><span>3</span></a>

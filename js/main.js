@@ -68,29 +68,6 @@ $(function () {
   var $callVideoMain = $('.js-call-video-main');
   var $popup = $('.js-popup');
   var $popupBorder = $('.js-popup-border');
-  var heroText = {
-    1: [
-      {
-        text: 'Кажется, у&nbsp;тебя&nbsp;есть промокод?'
-      },{
-        text: '<span>Нет промокода? Качай приложение!</span>'
-      }
-    ],
-    2: [
-      {
-        text: 'Получи веселого <br>прилипалу за каждые 500&nbsp;р. в&nbsp;чеке!'
-      },{
-        text: 'Получи веселого прилипалу <a href="#">по ссылке</a>'
-      }
-    ],
-    3: [
-      {
-        text: 'Просто играю в&nbsp;Прилипал на&nbsp;телефоне)'
-      },{
-        text: 'Просто играю'
-      }
-    ]
-  };
   var promoCodeSubmitAllow = false;
   var $promoCodeForm = $('.js-promo-from');
   var $phoneInput = $('.js-phone-input');
@@ -118,6 +95,48 @@ $(function () {
   var $footerMenuLink = $('.js-footer-menu-link');
   var $scrollTopLink = $('.js-scroll-top');
   var $playNumberLink = $('.js-play-number');
+  var $playTextInsert = $('.js-play-text-insert');
+  var $productCarousel = $('.js-products-carousel');
+  var $productTab = $('.js-products-tab');
+  var $productTabLink = $('.js-product-tab-link');
+  var $areaSelect = $('.js-area-select');
+  var $areaForm = $('.js-area-form');
+
+  var heroText = {
+    1: [
+      {
+        text: 'Есть промокод? <i>Получи приз!</i>'
+      },{
+        text: 'Еще нет промокода? <i>Тренируйся больше!</i>'
+      }
+    ],
+    2: [
+      {
+        text: '<p><a href="section-products" class="js-scroll-to">Получи <i>веселого<br>прилипалу</i> за&nbsp;каждые 500&nbsp;рублей в&nbsp;чеке!</a></p>'
+      },{
+        text: '<p><a href="section-heroes" class="js-scroll-to">Собери <i>всю коллекцию</i> прилипал-супергероев!</a></p>'
+      },{
+        text: '<p><i>Закачай</i> прилипал к себе в телефон!</p>'
+      },{
+        text: '<p><i>Попробуй</i> любимые товары прилипал!</p>'
+      },{
+        text: '<p>Выполни <i>все задания</i> от прилипал!</p>'
+      },{
+        text: '<p>Много одинаковых прилипал? <i>Меняйся!</i></p>'
+      }
+    ],
+    3: [
+      {
+        text: '<p>Прилипалы-супергерои прямо <i>в&nbsp;твоем телефоне!</i></p>'
+      },{
+        text: '<p>Набирай очки и <i>выигрывай призы!</i></p>'
+      },{
+        text: '<p><i>Играй</i> вместе с прилипалами-супергероями!</p>'
+      },{
+        text: '<p>Играю в <i>прилипал на телефоне</i> и тебе советую!</p>'
+      }
+    ]
+  };
   var playTextObj = {
     1: {
       title: "Береги голову",
@@ -170,7 +189,138 @@ $(function () {
       text: "Даже главному компьютерному гению среди супергероев нужна твоя помощь! Чтобы ослабить Тайфун, тебе кое-что понадобится. Скорее узнай, что именно, — раскрась картинку."
     }
   };
-  var $playTextInsert = $('.js-play-text-insert');
+  var productsObj = {
+    1: [{
+      id: 0,
+      title: 'Напиток Сок',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+      img: './i/tmp/product-1.png'
+    },{
+      id: 1,
+      title: 'Печеньки',
+      text: 'В ассортименте паштет,',
+      img: './i/tmp/product-2.png'
+    },{
+      id: 2,
+      title: 'Нектар яблочный',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+      img: './i/tmp/product-3.png'
+    },{
+      id: 3,
+      title: 'Чипсы LAYS',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+      img: './i/tmp/product-4.png'
+    },{
+      id: 4,
+      title: 'Напиток Сок',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+      img: './i/tmp/product-1.png'
+    },{
+      id: 5,
+      title: 'Печеньки',
+      text: 'В ассортименте паштет,',
+      img: './i/tmp/product-2.png'
+    }],
+    2: [{
+      id: 0,
+      title: 'Напиток Сок',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+      img: './i/tmp/product-1.png'
+    },{
+      id: 1,
+      title: 'Печеньки',
+      text: 'В ассортименте паштет,',
+      img: './i/tmp/product-2.png'
+    },{
+      id: 2,
+      title: 'Нектар яблочный',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+      img: './i/tmp/product-3.png'
+    },{
+      id: 3,
+      title: 'Чипсы LAYS',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+      img: './i/tmp/product-4.png'
+    },{
+      id: 4,
+      title: 'Напиток Сок',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+      img: './i/tmp/product-1.png'
+    }],
+    3: [{
+      id: 0,
+      title: 'Напиток Сок',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+      img: './i/tmp/product-1.png'
+    },{
+      id: 1,
+      title: 'Печеньки',
+      text: 'В ассортименте паштет,',
+      img: './i/tmp/product-2.png'
+    },{
+      id: 2,
+      title: 'Нектар яблочный',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+      img: './i/tmp/product-3.png'
+    },{
+      id: 3,
+      title: 'Чипсы LAYS',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+      img: './i/tmp/product-4.png'
+    },{
+      id: 4,
+      title: 'Напиток Сок',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+      img: './i/tmp/product-1.png'
+    },{
+      id: 2,
+      title: 'Нектар яблочный',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+      img: './i/tmp/product-3.png'
+    },{
+      id: 3,
+      title: 'Чипсы LAYS',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+      img: './i/tmp/product-4.png'
+    }],
+    4: [{
+      id: 0,
+      title: 'Напиток Сок',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+      img: './i/tmp/product-1.png'
+    },{
+      id: 1,
+      title: 'Печеньки',
+      text: 'В ассортименте паштет,',
+      img: './i/tmp/product-2.png'
+    },{
+      id: 2,
+      title: 'Нектар яблочный',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+      img: './i/tmp/product-3.png'
+    },{
+      id: 3,
+      title: 'Чипсы LAYS',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+      img: './i/tmp/product-4.png'
+    },{
+      id: 4,
+      title: 'Напиток Сок',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+      img: './i/tmp/product-1.png'
+    },{
+      id: 2,
+      title: 'Нектар яблочный',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+      img: './i/tmp/product-3.png'
+    },{
+      id: 3,
+      title: 'Чипсы LAYS',
+      text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+      img: './i/tmp/product-4.png'
+    }]
+  };
+  var currentArea = 1;
 
 
   $(window).on('scroll', function () {
@@ -190,8 +340,273 @@ $(function () {
   $(window).on('load', function () {
     loader();
     scrollTo($body, 0, 0);
+    getHashToOpenPromoPopup();
   });
 
+  /**
+   * set default region
+   */
+  function setDefRegion() {
+    $('.b-dropdown__item', $areaSelect).each(function () {
+      var id = parseInt($(this).attr('data-id'));
+
+      if (currentArea == id){
+        var html = $(this).html();
+        $(this).addClass('hidden active');
+        $('.b-dropdown__text', $areaSelect).html(html);
+        $('.js-input-for-select', $areaSelect).val(html);
+        return false;
+      }
+    })
+  }
+  setDefRegion();
+
+  /**
+   * get new products of change region
+   */
+  $('.js-input-for-select', $areaSelect).on('change', function () {
+
+    $.ajax({
+      url: $areaForm.attr('action'),
+      method: "GET",
+      data: $areaForm.serialize(),
+      dataType: "JSON",
+      success: function (data) {
+        data.result === 'ok' ? showSuccessProducts() : showErrorProducts();
+      },
+      error: function () {
+        showSuccessProducts();
+        // showErrorProducts();
+      }
+    });
+  });
+  
+  function showErrorProducts() {
+    
+  }
+
+  function showSuccessProducts() {
+
+    productsObj = {
+      1: [{
+        id: 0,
+        title: 'Напиток Сок 1111',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+        img: './i/tmp/product-1.png'
+      },{
+        id: 1,
+        title: 'Печеньки',
+        text: 'В ассортименте паштет,',
+        img: './i/tmp/product-2.png'
+      },{
+        id: 2,
+        title: 'Нектар яблочный',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+        img: './i/tmp/product-3.png'
+      },{
+        id: 3,
+        title: 'Чипсы LAYS',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+        img: './i/tmp/product-4.png'
+      },{
+        id: 4,
+        title: 'Напиток Сок',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+        img: './i/tmp/product-1.png'
+      },{
+        id: 5,
+        title: 'Печеньки',
+        text: 'В ассортименте паштет,',
+        img: './i/tmp/product-2.png'
+      }],
+      2: [{
+        id: 0,
+        title: 'Напиток Сок',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+        img: './i/tmp/product-1.png'
+      },{
+        id: 1,
+        title: 'Печеньки',
+        text: 'В ассортименте паштет,',
+        img: './i/tmp/product-2.png'
+      },{
+        id: 2,
+        title: 'Нектар яблочный',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+        img: './i/tmp/product-3.png'
+      },{
+        id: 3,
+        title: 'Чипсы LAYS',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+        img: './i/tmp/product-4.png'
+      },{
+        id: 4,
+        title: 'Напиток Сок',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+        img: './i/tmp/product-1.png'
+      }],
+      3: [{
+        id: 0,
+        title: 'Напиток Сок',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+        img: './i/tmp/product-1.png'
+      },{
+        id: 1,
+        title: 'Печеньки',
+        text: 'В ассортименте паштет,',
+        img: './i/tmp/product-2.png'
+      },{
+        id: 2,
+        title: 'Нектар яблочный',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+        img: './i/tmp/product-3.png'
+      },{
+        id: 3,
+        title: 'Чипсы LAYS',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+        img: './i/tmp/product-4.png'
+      },{
+        id: 4,
+        title: 'Напиток Сок',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+        img: './i/tmp/product-1.png'
+      },{
+        id: 2,
+        title: 'Нектар яблочный',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+        img: './i/tmp/product-3.png'
+      },{
+        id: 3,
+        title: 'Чипсы LAYS',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+        img: './i/tmp/product-4.png'
+      }],
+      4: [{
+        id: 0,
+        title: 'Напиток Сок',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+        img: './i/tmp/product-1.png'
+      },{
+        id: 1,
+        title: 'Печеньки',
+        text: 'В ассортименте паштет,',
+        img: './i/tmp/product-2.png'
+      },{
+        id: 2,
+        title: 'Нектар яблочный',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+        img: './i/tmp/product-3.png'
+      },{
+        id: 3,
+        title: 'Чипсы LAYS',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+        img: './i/tmp/product-4.png'
+      },{
+        id: 4,
+        title: 'Напиток Сок',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами, яичница,для котят и другие вкусняшки  для лидеров любящих футбол и другие развлечения',
+        img: './i/tmp/product-1.png'
+      },{
+        id: 2,
+        title: 'Нектар яблочный',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+        img: './i/tmp/product-3.png'
+      },{
+        id: 3,
+        title: 'Чипсы LAYS',
+        text: 'В ассортименте паштет, утка свиные рыльца, курятина, индейка с овощами',
+        img: './i/tmp/product-4.png'
+      }]
+    };
+
+    var data = productsObj;
+
+    $productTab.removeClass('show');
+
+    setTimeout(function () {
+      // reset slick if it work
+      $productCarousel.each(function () {
+        if ($(this).hasClass('slick-slider')){
+          $(this).slick('unslick');
+          $(this).html('');
+        }
+      });
+
+      setProducts(data);
+      $('.js-product-tab-link[data-type=1]').removeClass('active').trigger('click');
+    }, 450);
+
+  }
+
+  /**
+   * tab product
+   */
+  $productTabLink.on('click', function (e) {
+    e.preventDefault();
+
+    if (!$(this).hasClass('active')){
+      $productTabLink.removeClass('active');
+      $(this).addClass('active');
+      var id = $(this).attr('data-type');
+      $productTab.removeClass('show');
+      $('.js-products-tab[data-type='+id+']').addClass('show');
+      $('.js-product').removeClass('open');
+    }
+  });
+
+  /**
+   * set products to page and init carousel
+   */
+  function setProducts(data) {
+    
+    $.each(data, function (key, val) {
+      var $thisTab = $('.js-products-tab[data-type='+key+']');
+
+      $.each(val, function (key, val) {
+        $('.js-products-carousel', $thisTab).append('<div class="js-product b-products">'+
+            '<div class="b-products__pic" style="background-image: url('+val.img+')"></div>'+
+            '<div class="b-products__text">'+
+              '<div class="b-products__faq">'+
+                '<i class="b-products__faq-icon"></i>'+
+                '<div class="b-products__faq-text">'+
+                '<div class="b-products__faq-text-wrapper">'+
+                  '<h6>'+val.title+'</h6>'+
+                  '<p>'+val.text+'</p>'+
+                '</div>'+
+              '</div>'+
+            '</div>'+
+            '<h6 class="b-products__title">'+val.title+'</h6>'+
+          '</div>'+
+        '</div>');
+      });
+
+    });
+
+    productCarouselInit();
+  }
+  setProducts(productsObj);
+
+  /**
+   * product carousel init
+   */
+  function productCarouselInit() {
+    $productCarousel.each(function () {
+      $(this).slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        touchThreshold: 20,
+        responsive: [{
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1
+          }
+        }]
+      });
+    });
+  }
 
   /**
    * play number click
@@ -361,8 +776,12 @@ $(function () {
     if (hash == '#?promoCodePopup'){
       openPopupPromoCode();
     }
+    if (hash == '#?sectionApp'){
+      var percent = windowWidth / 100;
+      var offset = (windowWidth >= 768) ? 2 * percent : 3.5 * percent;
+      scrollTo($('#section-app'), offset);
+    }
   }
-  getHashToOpenPromoPopup();
 
   /**
    * close promo code popup
@@ -524,6 +943,7 @@ $(function () {
     if (e.which == 27 && $menuBurgerOverlay.hasClass('open')) {
       closeBurgerMenu();
     }
+
   });
 
   /**
@@ -538,6 +958,31 @@ $(function () {
 
     if ($target.is('.js-menu-overlay')){
       closeBurgerMenu();
+    }
+
+    /**
+     * product toggle open faq
+     */
+    if ($target.is('.js-product *')){
+      e.preventDefault();
+      var $thisProduct = $target.closest('.js-product');
+
+      if (!$thisProduct.hasClass('open')){
+        $('.js-product').removeClass('open');
+        $thisProduct.addClass('open');
+      } else {
+        $('.js-product').removeClass('open');
+      }
+    }
+
+    // scroll to
+    if ($target.is('.js-scroll-to *') || $target.is('.js-scroll-to')){
+      e.preventDefault();
+      var $thisLink = $target.closest('.js-scroll-to');
+      var href = $thisLink.attr('href');
+      var percent = windowWidth / 100;
+      var offset = (windowWidth >= 768) ? 2 * percent : 3.5 * percent;
+      scrollTo($('#'+href), offset);
     }
   });
 
@@ -554,7 +999,7 @@ $(function () {
       numText = 0;
 
     $(this).attr('data-text', numText);
-    $('.b-section-top__hero-cloud', $(this)).html(heroText[id][numText].text);
+    $('.b-section-top__hero-cloud div', $(this)).html(heroText[id][numText].text);
 
   });
 

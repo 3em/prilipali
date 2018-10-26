@@ -438,6 +438,7 @@ $(function () {
 
     // dropdown behaviour
     if ($target.is('.b-dropdown *')) {
+
       $parent = $target.parents('.b-dropdown');
       if ($target.is('.b-dropdown__item')) {
         $('.b-dropdown__item', $parent).removeClass('hidden active');
