@@ -338,10 +338,56 @@ $(function () {
   });
 
   $(window).on('load', function () {
-    loader();
-    scrollTo($body, 0, 0);
-    getHashToOpenPromoPopup();
+
   });
+  
+  function loaderAnimation() {
+    var width = 100,
+      perfData = window.performance.timing, // The PerformanceTiming interface represents timing-related performance information for the given page.
+      EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
+      time = parseInt((EstimatedTime/1000)%60)*100;
+
+    var s = Snap('.js-circle-loader');
+    var progress = s.select('.js-circle-loader-progress');
+
+
+    var PercentageID = $(".js-percent-loader"),
+      start = 0,
+      end = 100,
+      durataion = time;
+    animateValue(PercentageID, start, end, durataion);
+
+    function animateValue(id, start, end, duration) {
+
+      var range = end - start,
+        current = start,
+        increment = end > start? 1 : -1,
+        stepTime = Math.abs(Math.floor(duration / range)),
+        obj = $(id);
+
+      var timer = setInterval(function() {
+        current += increment;
+        $(obj).text(current + "%");
+
+        if (current == 100){
+          loader();
+          scrollTo($body, 0, 0);
+          getHashToOpenPromoPopup();
+        }
+
+        var value = 251.2 / 100 * current;
+        $('.js-circle-loader').css('opacity', 1);
+        progress.attr({strokeDasharray: '0, 251.2'});
+        progress.attr({ 'stroke-dasharray':value+',251.2'});
+
+        if (current == end) {
+          clearInterval(timer);
+        }
+      }, stepTime);
+    }
+
+  }
+  loaderAnimation();
 
   /**
    * set default region
@@ -887,16 +933,14 @@ $(function () {
    * loader activation and hide
    */
   function loader() {
+    $loader.addClass('active');
     setTimeout(function () {
-      $loader.addClass('active');
+      $body.addClass('show');
       setTimeout(function () {
-        $body.addClass('show');
-        setTimeout(function () {
-          $body.removeClass('transitions').addClass('regular').removeClass('overflow');
-          $html.removeClass('overflow');
-        }, 4000)
-      }, 1000)
-    }, 500);
+        $body.removeClass('transitions').addClass('regular').removeClass('overflow');
+        $html.removeClass('overflow');
+      }, 4000)
+    }, 600);
   }
 
   /**
