@@ -102,6 +102,7 @@ $(function () {
   var $areaSelect = $('.js-area-select');
   var $areaForm = $('.js-area-form');
 
+  var defaultPlayCloudText = '<h6>ПРИШЛО ВРЕМЯ ИГРЫ!</h6><p>качай и распечатывай задания от прилипал, делись своими результатами в социальных сетях с тегом #ПРИЛИПАЛЫ_4</p>';
   var heroText = {
     1: [
       {
@@ -667,6 +668,9 @@ $(function () {
       var thisItemArr = playTextObj[id];
 
       $playTextInsert.html('<h6><a target="_blank" href="'+thisItemArr.url+'" download>'+thisItemArr.title+'</a></h6><p>'+thisItemArr.text+'</p>').addClass('hero-text');
+    } else {
+      $playNumberLink.removeClass('active');
+      $playTextInsert.html(defaultPlayCloudText).removeClass('hero-text');
     }
   });
 
@@ -986,6 +990,14 @@ $(function () {
 
     if (e.which == 27 && $menuBurgerOverlay.hasClass('open')) {
       closeBurgerMenu();
+    }
+
+    if (e.which == 39 && windowWidth >= 768 && $sectionCarousel.hasClass('active-section')){
+      $('.js-carousel-heroes').data("carousel").go(1);
+    }
+
+    if (e.which == 37 && windowWidth >= 768 && $sectionCarousel.hasClass('active-section')){
+      $('.js-carousel-heroes').data("carousel").go(-1);
     }
 
   });

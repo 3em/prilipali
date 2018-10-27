@@ -567,7 +567,7 @@ body {
     transform: none;
     transition: transform .1s linear; }
     body.regular .b-section-top__hero.b-section-top__hero_3 {
-      transition: transform .15s linear !important; }
+      transition: transform .3s linear !important; }
   body.transitions .b-section-top__hero.b-section-top__hero_1 {
     opacity: 0;
     transform: translate(-150%, 0) scale(0.3); }
@@ -724,7 +724,8 @@ a {
   box-sizing: border-box;
   overflow: hidden;
   opacity: 0;
-  transition: opacity 1s .5s; }
+  transition: opacity 1s .5s;
+  z-index: 20; }
   .b-burger:hover:before {
     transform: translate(-50%, 0) scale(1.1); }
   .b-burger:before {
@@ -817,6 +818,15 @@ a {
   transition: background-position 2s 2s;
   backface-visibility: hidden; }
 
+.b-section-top__hero-cloud p::selection {
+  background: transparent; }
+
+.b-section-top__hero-cloud a::selection {
+  background: transparent; }
+
+.b-section-top__hero-cloud i::selection {
+  background: transparent; }
+
 .b-section-top__hero-cloud {
   position: absolute;
   z-index: 5;
@@ -843,6 +853,9 @@ a {
       top: 50%;
       transform: translate(0, -50%); }
 
+.b-section-top__hero-box {
+  pointer-events: auto !important; }
+
 .b-section-top__hero {
   position: absolute !important;
   z-index: 4;
@@ -852,7 +865,6 @@ a {
   .b-section-top__hero.b-section-top__hero_click {
     cursor: pointer;
     transition: transform .15s;
-    pointer-events: auto;
     backface-visibility: hidden; }
     .b-section-top__hero.b-section-top__hero_click:active {
       transform: scale(0.98) !important; }
@@ -1576,24 +1588,24 @@ a {
 
 .b-heroes-carousel {
   position: relative;
-  width: 80%;
+  width: 90%;
   height: 100%;
   margin: auto;
   overflow: visible !important;
   z-index: 1;
-  top: 8vw; }
+  top: 8.5vw; }
 
 .b-heroes-carousel__item {
   width: 15.625vw;
-  height: 27.27vw;
+  height: 30.27vw;
   z-index: 1; }
   .b-heroes-carousel__item .b-heroes-carousel__pic {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 4vw;
+    bottom: 3vw;
     top: 0;
-    transform: scale(0.6);
+    transform: scale(0.57);
     transform-origin: center bottom;
     transition: .35s;
     z-index: 1; }
@@ -1611,8 +1623,8 @@ a {
     transition: opacity .35s .35s; }
   .b-heroes-carousel__item .b-heroes-carousel__text {
     position: absolute;
-    left: 80%;
-    bottom: 60%;
+    left: 70%;
+    bottom: 68%;
     width: 37.5vw;
     height: 15vw;
     background: url("../i/section-carousel/carousel-heroes-cloud.svg") no-repeat center;
@@ -1827,9 +1839,9 @@ a {
         margin: 0 2vw; }
   .b-comics__hero.b-comics__hero-6 {
     width: 6.48vw;
-    height: 13.98vw;
+    height: 13vw;
     left: 13vw;
-    bottom: 7.53vw;
+    bottom: 7.96vw;
     background: url("../i/heroes-carousel/16-sheep.png") no-repeat;
     background-size: 100% auto;
     opacity: .83; }
@@ -2061,9 +2073,25 @@ a {
 .b-footer {
   position: relative;
   height: 35.15625vw;
-  background: url("../i/footer/footer-bg.jpg") no-repeat center 20%;
-  background-size: cover;
   margin: 2.5% 0; }
+  .b-footer .b-footer__bg-wrapper {
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute !important; }
+  .b-footer .b-footer__bg {
+    position: absolute !important;
+    left: -5% !important;
+    right: -5%;
+    top: -5% !important;
+    bottom: -5%;
+    background: url("../i/footer/footer-bg.jpg") no-repeat center 20%;
+    background-size: cover;
+    transition: transform .3s linear; }
+  .b-footer * {
+    z-index: 3; }
 
 .b-footer-menu {
   position: relative;
@@ -2184,7 +2212,7 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 10; }
+    z-index: 5; }
   .b-section-products .b-section-products__cloud {
     position: absolute;
     right: .5vw;
@@ -2328,12 +2356,19 @@ a {
     position: relative;
     color: #fff;
     transition: color .25s;
-    margin-bottom: .5vw; }
+    margin-bottom: 0 !important; }
   .b-area-box .b-dropdown__box {
     margin-left: -1.2501vw;
     margin-right: -1.2501vw; }
     .b-area-box .b-dropdown__box .b-dropdown {
-      font-size: 1.171vw; }
+      font-size: 1.171vw;
+      background: transparent; }
+      .b-area-box .b-dropdown__box .b-dropdown.b-dropdown_open {
+        background: #fff; }
+        .b-area-box .b-dropdown__box .b-dropdown.b-dropdown_open .b-dropdown__text {
+          color: #aba0a0; }
+      .b-area-box .b-dropdown__box .b-dropdown .b-dropdown__text {
+        color: #d8171e; }
     .b-area-box .b-dropdown__box .b-dropdown__sub {
       box-shadow: 0 25px 30px rgba(0, 0, 0, 0.3); }
 
@@ -3232,9 +3267,9 @@ a {
         margin: 0 5vw 0 2vw; }
   .b-comics__hero.b-comics__hero-6 {
     width: 12.53vw;
-    height: 27.2vw;
+    height: 25vw;
     left: 25.5vw;
-    bottom: 14.7vw; }
+    bottom: 15.55vw; }
   .b-comics__hero.b-comics__hero-7 {
     width: 21vw;
     height: 44vw;
@@ -3339,6 +3374,8 @@ a {
     height: auto;
     padding: 40.53% 0 8vw;
     background: #4f8dca; }
+    .b-footer .b-footer__bg-wrapper {
+      display: none; }
     .b-footer * {
       z-index: 3; }
     .b-footer:before {

@@ -7,7 +7,7 @@
     <title>Веселые прилипалы 4</title>
 
     <link rel="stylesheet" href="css/jquery-ui.css" media="all">
-    <link rel="stylesheet" href="css/common.css?v3" media="all">
+    <link rel="stylesheet" href="css/common.css?v4" media="all">
 
     <script src="js/libs/jquery-3.3.1.min.js"></script>
     <script src="js/libs/jquery-ui.min.js"></script>
@@ -17,8 +17,8 @@
     <script src="js/libs/phone-mask.js"></script>
     <script src="js/libs/jquery.cloud9carousel.js"></script>
     <script src="js/libs/slick.js"></script>
-    <script src="js/main.js?v3"></script>
-    <script src="js/map.js?v3"></script>
+    <script src="js/main.js?v4"></script>
+    <script src="js/map.js?v4"></script>
 
 
 </head>
@@ -111,20 +111,20 @@
             </div>
             <div class="js-parallax b-section-top__hero-box">
                 <div class="b-section-top__hero b-section-top__hero_1"></div>
-                <div data-id="1" data-text="0" data-depth="0.08" class="js-hero-click b-section-top__hero b-section-top__hero_click b-section-top__hero_2">
+                <div data-pointer-events="true" data-id="1" data-text="0" data-depth="0.08" class="js-hero-click b-section-top__hero b-section-top__hero_click b-section-top__hero_2">
                     <a href="#" class="js-promo-code-call b-section-top__hero-cloud">
                         <div>
                             Есть промокод? <i>Получи приз!</i>
                         </div>
                     </a>
                 </div>
-                <div data-depth="0.2" data-friction-x=".01" data-friction-y=".01" class="b-section-top__hero b-section-top__hero_3">
+                <div data-pointer-events="true" data-depth-x="0.2" data-depth-y="0.15" data-friction-x=".01" data-friction-y=".01" class="b-section-top__hero b-section-top__hero_3">
                     <a href="#" class="js-call-video-main b-section-top__hero-cloud">
                         Этому городу
                         нужен герой!
                     </a>
                 </div>
-                <div data-id="2" data-text="0" class="js-hero-click b-section-top__hero b-section-top__hero_click b-section-top__hero_4">
+                <div data-pointer-events="true" data-id="2" data-text="0" class="js-hero-click b-section-top__hero b-section-top__hero_click b-section-top__hero_4">
                     <div class="b-section-top__hero-cloud">
                         <div>
                             <p>
@@ -135,7 +135,7 @@
                         </div>
                     </div>
                 </div>
-                <div data-id="3" data-text="0" data-depth="0.05" class="js-hero-click b-section-top__hero b-section-top__hero_click b-section-top__hero_5">
+                <div data-pointer-events="true" data-id="3" data-text="0" data-depth="0.05" class="js-hero-click b-section-top__hero b-section-top__hero_click b-section-top__hero_5">
                     <div class="b-section-top__hero-cloud">
                         <div>
                             <p>Прилипалы-супергерои прямо <i>в&nbsp;твоем телефоне!</i></p>
@@ -817,6 +817,10 @@
         </section>
 
         <section class="b-footer">
+
+            <div class="js-parallax b-footer__bg-wrapper">
+                <div data-depth="0.07" data-friction-x=".01" data-friction-y=".01" class="b-footer__bg"></div>
+            </div>
 
             <a href="#" class="js-scroll-top b-footer__logo"></a>
 
