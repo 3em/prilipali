@@ -106,35 +106,35 @@ $(function () {
   var heroText = {
     1: [
       {
-        text: 'Есть промокод? <i>Получи приз!</i>'
+        text: '<p>Есть промокод? <i>Получи приз!</i></p>'
       },{
-        text: 'Еще нет промокода? <i>Тренируйся больше!</i>'
+        text: '<p>Еще нет промокода? <i>Тренируйся больше!</i></p>'
       }
     ],
     2: [
       {
         text: '<p><a href="section-products" class="js-scroll-to">Получи <i>веселого<br>прилипалу</i> за&nbsp;каждые 500&nbsp;рублей в&nbsp;чеке!</a></p>'
       },{
-        text: '<p><a href="section-heroes" class="js-scroll-to">Собери <i>всю коллекцию</i> прилипал-супергероев!</a></p>'
+        text: '<p><a href="section-heroes" class="js-scroll-to">Собери <i>полную коллекцию</i> прилипал-супергероев!</a></p>'
       },{
-        text: '<p><a href="section-app" class="js-scroll-to"><i>Закачай</i> прилипал к себе в телефон!</a></p>'
+        text: '<p><a href="section-app" class="js-scroll-to"><i>Закачай</i> прилипал к&nbsp;себе в&nbsp;телефон!</a></p>'
       },{
-        text: '<p><a href="section-products" class="js-scroll-to"><i>Попробуй</i> любимые товары прилипал!</a></p>'
-      },{
-        text: '<p><a href="section-play" class="js-scroll-to">Выполни <i>все задания</i> от прилипал!</a></p>'
+        text: '<p><a href="section-play" class="js-scroll-to">Выполни <i>все задания</i> от&nbsp;прилипал!</a></p>'
       },{
         text: '<p><a href="section-barter" class="js-scroll-to">Много одинаковых прилипал? <i>Меняйся!</i></a></p>'
+      },{
+        text: '<p><a href="section-products" class="js-scroll-to"><i>Попробуй</i> любимые товары прилипал!</a></p>'
       }
     ],
     3: [
       {
-        text: '<p>Прилипалы-супергерои прямо <i>в&nbsp;твоем телефоне!</i></p>'
+        text: '<p><a href="section-play" class="js-scroll-to">Прилипалы-супергерои <i>в&nbsp;твоем телефоне!</i></a></p>'
       },{
-        text: '<p>Набирай очки и <i>выигрывай призы!</i></p>'
+        text: '<p><a href="section-play" class="js-scroll-to">Набирай очки и&nbsp;<i>выигрывай призы!</i></a></p>'
       },{
-        text: '<p><i>Играй</i> вместе с прилипалами-супергероями!</p>'
+        text: '<p><a href="section-play" class="js-scroll-to"><i>Играй</i> вместе с&nbsp;прилипалами-супергероями!</a></p>'
       },{
-        text: '<p>Играю в <i>прилипал на телефоне</i> и тебе советую!</p>'
+        text: '<p><a href="section-play" class="js-scroll-to">Играю в&nbsp;<i>прилипал на&nbsp;телефоне</i> и&nbsp;тебе советую!</a></p>'
       }
     ]
   };

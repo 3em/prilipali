@@ -896,7 +896,7 @@ a {
       height: 11.71875vw;
       background: url("../i/section-top/top-hero-2_cloud.svg") no-repeat center;
       background-size: 100% auto;
-      padding: 2.2vw 1vw 0 2vw;
+      padding: 2.2vw 1vw 3.3vw 2vw;
       transition: opacity .25s 2.7s; }
       .b-section-top__hero.b-section-top__hero_2 .b-section-top__hero-cloud span {
         display: block;
