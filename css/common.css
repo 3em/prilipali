@@ -1631,8 +1631,8 @@ a {
     transition: opacity .35s .35s; }
   .b-heroes-carousel__item .b-heroes-carousel__text {
     position: absolute;
-    left: 70%;
-    bottom: 68%;
+    left: 85%;
+    bottom: 75%;
     width: 37.5vw;
     height: 15vw;
     background: url("../i/section-carsl/carousel-heroes-cloud.svg") no-repeat center;

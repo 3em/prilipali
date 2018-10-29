@@ -339,18 +339,14 @@ $(function () {
     menuBorderHeight();
   });
 
-  var loaderInterval = setInterval(function () {
-    loaderAnimation();
-  }, 1500);
-
   $(window).on('load', function () {
+    loaderAnimation();
 
     var status = false;
     //defining a 'watcher' for an attribute
     watch(LOADER_PERCENT, "0", function(prop, action, newvalue, oldvalue){
       status = true;
       if (newvalue == 100){
-        clearInterval(loaderInterval);
         scrollTo($body, 0, 0);
         loader();
         getHashToOpenPromoPopup();
@@ -358,7 +354,6 @@ $(function () {
     });
 
     if (LOADER_PERCENT[0] == 100 && !status){
-      clearInterval(loaderInterval);
       scrollTo($body, 0, 0);
       loader();
       getHashToOpenPromoPopup();
@@ -384,7 +379,7 @@ $(function () {
 
     function animateValue(id, start, end, duration) {
 
-      duration = 1500;
+      duration = duration + 1500;
 
       var range = end - start,
         current = start,
@@ -813,9 +808,9 @@ $(function () {
         bringToFront: true,
         frontItemClass: 'active',
         itemClass: 'b-heroes-carousel__item',
-        farScale: 0.1,
-        yRadius: $('.js-carousel-heroes').height() / 6 * -1,
-        xRadius: $('.js-carousel-heroes').width() / 2
+        farScale: 0.5,
+        // yRadius: $('.js-carousel-heroes').height() / 6 * -1,
+        // xRadius: $('.js-carousel-heroes').width() / 2
       });
     } else if (windowWidth < 768 && !$('.js-carousel-heroes').hasClass('slick-slider')) {
       $carouselHeroes_slideIndex.html('1');
