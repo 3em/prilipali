@@ -373,6 +373,8 @@ $(function () {
 
     function animateValue(id, start, end, duration) {
 
+      duration = duration + 1000;
+
       var range = end - start,
         current = start,
         increment = end > start? 1 : -1,
