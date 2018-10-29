@@ -340,24 +340,23 @@ $(function () {
   });
 
   $(window).on('load', function () {
-    loaderAnimation();
 
-    var status = false;
-    //defining a 'watcher' for an attribute
-    watch(LOADER_PERCENT, "0", function(prop, action, newvalue, oldvalue){
-      status = true;
-      if (newvalue == 100){
-        scrollTo($body, 0, 0);
-        loader();
-        getHashToOpenPromoPopup();
-      }
-    });
+    // var status = false;
+    // //defining a 'watcher' for an attribute
+    // watch(LOADER_PERCENT, "0", function(prop, action, newvalue, oldvalue){
+    //   status = true;
+    //   if (newvalue == 100){
+    //     scrollTo($body, 0, 0);
+    //     loader();
+    //     getHashToOpenPromoPopup();
+    //   }
+    // });
 
-    if (LOADER_PERCENT[0] == 100 && !status){
+    // if (LOADER_PERCENT[0] == 100 && !status){
       scrollTo($body, 0, 0);
       loader();
       getHashToOpenPromoPopup();
-    }
+    // }
 
   });
   
@@ -405,6 +404,7 @@ $(function () {
     }
 
   }
+  // loaderAnimation();
 
   /**
    * set default region
