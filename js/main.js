@@ -117,13 +117,13 @@ $(function () {
       },{
         text: '<p><a href="section-heroes" class="js-scroll-to">Собери <i>всю коллекцию</i> прилипал-супергероев!</a></p>'
       },{
-        text: '<p><i>Закачай</i> прилипал к себе в телефон!</p>'
+        text: '<p><a href="section-app" class="js-scroll-to"><i>Закачай</i> прилипал к себе в телефон!</a></p>'
       },{
-        text: '<p><i>Попробуй</i> любимые товары прилипал!</p>'
+        text: '<p><a href="section-products" class="js-scroll-to"><i>Попробуй</i> любимые товары прилипал!</a></p>'
       },{
-        text: '<p>Выполни <i>все задания</i> от прилипал!</p>'
+        text: '<p><a href="section-play" class="js-scroll-to">Выполни <i>все задания</i> от прилипал!</a></p>'
       },{
-        text: '<p>Много одинаковых прилипал? <i>Меняйся!</i></p>'
+        text: '<p><a href="section-barter" class="js-scroll-to">Много одинаковых прилипал? <i>Меняйся!</i></a></p>'
       }
     ],
     3: [
@@ -323,6 +323,7 @@ $(function () {
   };
   var currentArea = 1;
 
+  var LOADER_PERCENT = Object;
 
   $(window).on('scroll', function () {
     activeSectionScroll();
@@ -339,6 +340,18 @@ $(function () {
   });
 
   $(window).on('load', function () {
+    var status = false;
+    //defining a 'watcher' for an attribute
+    watch(LOADER_PERCENT, "0", function(prop, action, newvalue, oldvalue){
+      status = true;
+      if (newvalue == 100){
+        loader();
+      }
+    });
+
+    if (LOADER_PERCENT[0] == 100 && !status){
+      loader();
+    }
 
   });
   
@@ -366,22 +379,23 @@ $(function () {
         stepTime = Math.abs(Math.floor(duration / range)),
         obj = $(id);
 
-      var timer = setInterval(function() {
-        current += increment;
-        $(obj).text(current + "%");
+      LOADER_PERCENT[0] = start;
 
-        if (current == 100){
-          loader();
+      var timer = setInterval(function() {
+        LOADER_PERCENT[0] += increment;
+        $(obj).text(LOADER_PERCENT[0] + "%");
+
+        if (LOADER_PERCENT[0] == 100){
           scrollTo($body, 0, 0);
           getHashToOpenPromoPopup();
         }
 
-        var value = 251.2 / 100 * current;
+        var value = 251.2 / 100 * LOADER_PERCENT[0];
         $('.js-circle-loader').css('opacity', 1);
         progress.attr({strokeDasharray: '0, 251.2'});
         progress.attr({ 'stroke-dasharray':value+',251.2'});
 
-        if (current == end) {
+        if (LOADER_PERCENT[0] == end) {
           clearInterval(timer);
         }
       }, stepTime);

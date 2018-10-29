@@ -504,6 +504,10 @@ a {
   transition: background-position 2s 2s;
   backface-visibility: hidden;
 }
+
+.b-section-top__hero-cloud::selection {
+  background: transparent;
+}
 .b-section-top__hero-cloud p::selection {
   background: transparent;
 }
@@ -564,12 +568,17 @@ a {
   }
 
   &.b-section-top__hero_click{
-    cursor: pointer;
     transition: transform .15s;
     backface-visibility: hidden;
 
     &:active{
       transform: scale(.98) !important;
+    }
+
+    .b-section-top__hero-cloud{
+      p{
+        cursor: pointer;
+      }
     }
   }
 
@@ -594,6 +603,8 @@ a {
     .b-section-top__hero-cloud{
       left: 90%;
       bottom: 45%;
+      font-size: 1.25vw;
+      line-height: $lh19;
       width: 12.1875vw;
       height: 11.71875vw;
       background: url("../i/section-top/top-hero-2_cloud.svg") no-repeat center;
@@ -613,10 +624,10 @@ a {
   &.b-section-top__hero_3{
     left: 40% !important;
     top: auto !important;
-    bottom: 27%;
+    bottom: 27.2%;
     width: 4.58vw;
-    height: 6.68vw;
-    background: url("../i/heroes-carousel/20-mouse.png") no-repeat center 40%;
+    height: 7.2vw;
+    background: url("../i/section-top/top-hero-3.png") no-repeat center 40%;
     background-size: 100% auto;
     pointer-events: auto;
     opacity: 0;
@@ -663,13 +674,15 @@ a {
     right: 3%;
     bottom: 2%;
     width: 9.8vw;
-    height: 13vw;
-    background: url("../i/section-top/top-hero-5.svg") no-repeat center;
+    height: 15.4vw;
+    background: url("../i/section-download/hero-2.png") no-repeat center;
     background-size: 100% auto;
 
     .b-section-top__hero-cloud{
       right: 53%;
       bottom: 80%;
+      font-size: 1.25vw;
+      line-height: $lh19;
       width: 12.58vw;
       height: 14.77vw;
       background: url("../i/section-top/top-hero-5_cloud.svg") no-repeat center bottom;
@@ -1297,7 +1310,7 @@ a {
     height: 0;
     width: 0;
     //border-top-right-radius: 5px;
-    border-left: 23.9vw solid transparent;
+    border-left: 24vw solid transparent;
     border-bottom: 1.4vw solid rgba(254,192,46, .93);
   }
 
@@ -1506,7 +1519,7 @@ a {
 .b-heroes-carousel{
   position: relative;
   //width: 62.5vw;
-  width: 90%;
+  width: 100%;
   height: 100%;
   margin: auto;
   overflow: visible !important;
@@ -1566,6 +1579,7 @@ a {
     .b-heroes-carousel__text-wrapper{
       position: relative;
       font-family: $OutofLineBB_italic;
+      font-style: italic;
       font-size: $fs13;
       line-height: $lh17;
       margin: 2vw 3vw 0 5vw;
@@ -1573,8 +1587,10 @@ a {
       p{
         margin-bottom: .3vw;
         i{
-          font-family: $OutofLineBB_italicBold;
+          font-family: $OutofLineBBitalicBold;
           line-height: $lh19;
+          font-weight: bold;
+          font-style: italic;
         }
       }
 
@@ -1842,7 +1858,7 @@ a {
     width: 6.48vw;
     height: 13vw;
     left: 13vw;
-    bottom: 7.96vw;
+    bottom: 7.8vw;
     background: url("../i/heroes-carousel/16-sheep.png") no-repeat;
     background-size: 100% auto;
     opacity: .83;
@@ -2116,7 +2132,9 @@ a {
 
 .b-menu-box__download{
   position: relative;
-  font-family: $OutofLineBB_italicBold;
+  font-family: $OutofLineBBitalicBold;
+  font-weight: bold;
+  font-style: italic;
   padding-bottom: 4vw;
 
   li{
@@ -2164,7 +2182,7 @@ a {
 
 .b-footer-menu{
   position: relative;
-  z-index: 2;
+  z-index: 3;
   padding-top: 6.09vw;
   margin: 0 4.6875vw - 0.74vw * 2;
 
@@ -2365,7 +2383,9 @@ a {
   position: absolute;
   top: 11vw;
   left: 5vw;
-  font-family: $OutofLineBB_italicBold;
+  font-family: $OutofLineBBitalicBold;
+  font-weight: bold;
+  font-style: italic;
   font-size: $fs15;
   line-height: $fs18;
   border-bottom: 2px solid $redColor;
@@ -2454,6 +2474,7 @@ a {
     font-size: 1.72vw;
     line-height: 1.72vw;
     font-family: $OutofLineBB_bold;
+    font-weight: bold;
     padding-top: 1.05vw;
 
     .b-product-tabs__numbers{
@@ -2511,7 +2532,9 @@ a {
   position: absolute;
   top: 3.59vw;
   left: 32vw + 15vw + 5vw;
-  font-family: $OutofLineBB_italicBold;
+  font-family: $OutofLineBBitalicBold;
+  font-weight: bold;
+  font-style: italic;
   font-size: $fs15;
   line-height: $fs18;
   padding-left: 2.97vw;
@@ -2542,9 +2565,19 @@ a {
     .b-dropdown{
       font-size: $fs15;
       background: transparent;
+      display: inline-block;
+
+      .b-dropdown__arrow{
+        right: 1.0626vw;
+      }
 
       &.b-dropdown_open{
         background: #fff;
+        display: block;
+
+        .b-dropdown__arrow{
+          right: 1.5626vw;
+        }
 
         .b-dropdown__text{
           color: #aba0a0;
@@ -2669,6 +2702,7 @@ a {
   color: #fff !important;
   line-height: 4.22vw;
   font-family: $OutofLineBB_bold;
+  font-weight: bold;
   font-size: $fs27;
 
   &:hover{
@@ -2679,7 +2713,6 @@ a {
 
   &.active{
     color: $regularColor !important;
-    cursor: default;
 
     &:before{
       background-image: url("../i/section-play/play-number-active.svg");
@@ -2776,6 +2809,7 @@ a {
 
   h6{
     font-family: $OutofLineBB_bold;
+    font-weight: bold;
     font-size: $fs18;
     line-height: $lh24;
     margin-bottom: .55vw;
@@ -2906,6 +2940,7 @@ a {
 
   .b-products__title{
     font-family: $OutofLineBB_italic;
+    font-style: italic;
     font-size: $fs15;
     line-height: $lh19;
     color: #fff;
@@ -2963,6 +2998,7 @@ a {
 
       h6{
         font-family: $OutofLineBB_bold;
+        font-weight: bold;
         font-size: $fs18;
         line-height: $lh24;
         margin-bottom: .3vw;
