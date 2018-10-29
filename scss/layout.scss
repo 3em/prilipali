@@ -1493,10 +1493,10 @@ a {
 }
 
 .b-section-carousel{
-  height: $sectionHeight;
+  height: 43.15625vw;
   margin: 2.5% 0;
   background: url("../i/section-carsl/carousel-bg.jpg") no-repeat center bottom;
-  background-size: cover;
+  background-size: 150% auto;
   position: relative;
   overflow: hidden;
   opacity: 0;
@@ -1524,7 +1524,7 @@ a {
   margin: auto;
   overflow: visible !important;
   z-index: 1;
-  top: 8.5vw;
+  top: 2vw;
 }
 
 .b-heroes-carousel__item{
