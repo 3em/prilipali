@@ -1642,7 +1642,7 @@ a {
     backface-visibility: hidden; }
     .b-heroes-carousel__item .b-heroes-carousel__text .b-heroes-carousel__text-wrapper {
       position: relative;
-      font-family: "OutofLineBBitalic";
+      font-family: "OutofLineBB-italic";
       font-style: italic;
       font-size: 1.0156vw;
       line-height: 1.328vw;
@@ -2313,7 +2313,7 @@ a {
     text-align: center;
     font-size: 1.72vw;
     line-height: 1.72vw;
-    font-family: "OutofLineBBbold";
+    font-family: "OutofLineBB-bold";
     font-weight: bold;
     padding-top: 1.05vw; }
     .b-product-tabs__box .b-product-tabs .b-product-tabs__numbers {
@@ -2487,7 +2487,7 @@ a {
   text-align: center;
   color: #fff !important;
   line-height: 4.22vw;
-  font-family: "OutofLineBBbold";
+  font-family: "OutofLineBB-bold";
   font-weight: bold;
   font-size: 2.11vw; }
   .b-section-play__numbers:hover:before {
@@ -2567,7 +2567,7 @@ a {
     font-size: 1.1vw;
     line-height: 1.45vw; }
   .b-section-play__cloud h6 {
-    font-family: "OutofLineBBbold";
+    font-family: "OutofLineBB-bold";
     font-weight: bold;
     font-size: 1.40625vw;
     line-height: 1.875vw;
@@ -2662,7 +2662,7 @@ a {
     background-position: center bottom;
     background-size: cover; }
   .b-products .b-products__title {
-    font-family: "OutofLineBBitalic";
+    font-family: "OutofLineBB-italic";
     font-style: italic;
     font-size: 1.171vw;
     line-height: 1.484vw;
@@ -2710,7 +2710,7 @@ a {
       max-height: 14.1vw;
       overflow: hidden; }
       .b-products .b-products__faq-text .b-products__faq-text-wrapper h6 {
-        font-family: "OutofLineBBbold";
+        font-family: "OutofLineBB-bold";
         font-weight: bold;
         font-size: 1.40625vw;
         line-height: 1.875vw;
