@@ -345,12 +345,16 @@ $(function () {
     watch(LOADER_PERCENT, "0", function(prop, action, newvalue, oldvalue){
       status = true;
       if (newvalue == 100){
+        scrollTo($body, 0, 0);
         loader();
+        getHashToOpenPromoPopup();
       }
     });
 
     if (LOADER_PERCENT[0] == 100 && !status){
+      scrollTo($body, 0, 0);
       loader();
+      getHashToOpenPromoPopup();
     }
 
   });
@@ -373,7 +377,7 @@ $(function () {
 
     function animateValue(id, start, end, duration) {
 
-      duration = duration + 1000;
+      duration = duration + 1500;
 
       var range = end - start,
         current = start,
@@ -386,11 +390,6 @@ $(function () {
       var timer = setInterval(function() {
         LOADER_PERCENT[0] += increment;
         $(obj).text(LOADER_PERCENT[0] + "%");
-
-        if (LOADER_PERCENT[0] == 100){
-          scrollTo($body, 0, 0);
-          getHashToOpenPromoPopup();
-        }
 
         var value = 251.2 / 100 * LOADER_PERCENT[0];
         $('.js-circle-loader').css('opacity', 1);
