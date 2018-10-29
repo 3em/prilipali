@@ -675,7 +675,7 @@ a {
     bottom: 2%;
     width: 9.8vw;
     height: 15.4vw;
-    background: url("../i/section-download/hero-2.png") no-repeat center;
+    background: url("../i/section-dwnld/hero-2.png") no-repeat center;
     background-size: 100% auto;
 
     .b-section-top__hero-cloud{
@@ -1495,7 +1495,7 @@ a {
 .b-section-carousel{
   height: $sectionHeight;
   margin: 2.5% 0;
-  background: url("../i/section-carousel/carousel-bg.jpg") no-repeat center bottom;
+  background: url("../i/section-carsl/carousel-bg.jpg") no-repeat center bottom;
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -1512,7 +1512,7 @@ a {
   font-size: 0;
   line-height: 0;
   color: transparent;
-  background: url("../i/section-carousel/carousel-title.png") no-repeat center;
+  background: url("../i/section-carsl/carousel-title.png") no-repeat center;
   background-size: 100% auto;
 }
 
@@ -1570,7 +1570,7 @@ a {
     bottom: 68%;
     width: 37.5vw;
     height: 15vw;
-    background: url("../i/section-carousel/carousel-heroes-cloud.svg") no-repeat center;
+    background: url("../i/section-carsl/carousel-heroes-cloud.svg") no-repeat center;
     background-size: 100% auto;
     z-index: 2;
     opacity: 0;
@@ -1658,7 +1658,7 @@ a {
 
     &.b-comics_1{
       margin-right: 2.5%;
-      background: url("../i/section-download/bg-1.jpg") no-repeat center;
+      background: url("../i/section-dwnld/bg-1.jpg") no-repeat center;
       background-size: cover;
     }
     &.b-comics_3{
@@ -1668,7 +1668,7 @@ a {
       z-index: 2;
     }
     &.b-comics_2{
-      background: url("../i/section-download/bg-2.jpg") no-repeat center;
+      background: url("../i/section-dwnld/bg-2.jpg") no-repeat center;
       background-size: cover;
     }
     &.b-comics_4{
@@ -1716,7 +1716,7 @@ a {
   &.b-comics__hero-1{
     width: 9.53vw;
     height: 17.11vw;
-    background: url("../i/section-download/hero-1.png") no-repeat center;
+    background: url("../i/section-dwnld/hero-1.png") no-repeat center;
     background-size: 100% auto;
     left: 6vw;
     bottom: 6.8vw;
@@ -1726,7 +1726,7 @@ a {
       bottom: 86%;
       width: 16vw;
       height: 9vw;
-      background: url("../i/section-download/text-cloud-1.svg") no-repeat center;
+      background: url("../i/section-dwnld/text-cloud-1.svg") no-repeat center;
       background-size: 100% auto;
       transition: transform .35s, opacity .35s;
 
@@ -1740,7 +1740,7 @@ a {
   &.b-comics__hero-2{
     width: 11.48vw;
     height: 17.89vw;
-    background: url("../i/section-download/hero-2.png") no-repeat center;
+    background: url("../i/section-dwnld/hero-2.png") no-repeat center;
     background-size: 100% auto;
     right: 4.2vw;
     bottom: 1.5vw;
@@ -1750,7 +1750,7 @@ a {
       bottom: 86%;
       width: 13.5vw;
       height: 14.8vw;
-      background: url("../i/section-download/text-cloud-2.svg") no-repeat center;
+      background: url("../i/section-dwnld/text-cloud-2.svg") no-repeat center;
       background-size: 100% auto;
       transition: transform .35s .25s, opacity .35s .25s;
 
@@ -1773,7 +1773,7 @@ a {
       bottom: 45%;
       width: 19vw;
       height: 31vw;
-      background: url("../i/section-download/text-cloud-3.svg") no-repeat center;
+      background: url("../i/section-dwnld/text-cloud-3.svg") no-repeat center;
       background-size: 100% auto;
       font-size: 1.20625vw;
       line-height: 1.675vw;
@@ -1908,7 +1908,7 @@ a {
   height: 40vw;
   left: -8vw;
   bottom: -2vw;
-  background: url("../i/section-download/iphone.png") no-repeat;
+  background: url("../i/section-dwnld/iphone.png") no-repeat;
   background-size: 100% auto;
 
   div{
@@ -1917,7 +1917,7 @@ a {
     height: 23.7vw;
     left: 13.3vw;
     top: 8.1vw;
-    background: url("../i/section-download/phone-bg-1.jpg") no-repeat center;
+    background: url("../i/section-dwnld/phone-bg-1.jpg") no-repeat center;
     background-size: cover;
   }
 }
@@ -2316,7 +2316,7 @@ a {
   position: relative;
   margin: 2.5% 0;
   height: $sectionHeight;
-  background: url("../i/section-products/bg.jpg") no-repeat center;
+  background: url("../i/section-prod/bg.jpg") no-repeat center;
   background-size: cover;
   overflow: hidden;
 
@@ -2342,7 +2342,7 @@ a {
     top: -3vw;
     width: 31.48vw;
     height: 23.59vw;
-    background: url("../i/section-products/text-cloud.svg") no-repeat center;
+    background: url("../i/section-prod/text-cloud.svg") no-repeat center;
     background-size: 100% auto;
     font-size: 1.5625vw;
     line-height: 1.95vw;
@@ -2364,7 +2364,7 @@ a {
   color: transparent;
   width: 20.39vw;
   height: 7.73vw;
-  background: url("../i/section-products/section-title.png") no-repeat center;
+  background: url("../i/section-prod/section-title.png") no-repeat center;
   background-size: 100% auto;
 
   &:before{
@@ -2374,7 +2374,7 @@ a {
     top: 3%;
     width: 8.2vw;
     height: 2.11vw;
-    background: url("../i/section-products/title-arrow.svg") no-repeat;
+    background: url("../i/section-prod/title-arrow.svg") no-repeat;
     background-size: 100% auto;
   }
 }
@@ -2411,7 +2411,7 @@ a {
     &:nth-child(2){
       .b-product-tabs{
         &:before{
-          background-image: url("../i/section-products/item-cloud2.svg");
+          background-image: url("../i/section-prod/item-cloud2.svg");
         }
         .b-product-tabs__numbers{
           span{
@@ -2427,7 +2427,7 @@ a {
     &:nth-child(3){
       .b-product-tabs{
         &:before{
-          background-image: url("../i/section-products/item-cloud3.svg");
+          background-image: url("../i/section-prod/item-cloud3.svg");
         }
         .b-product-tabs__numbers{
           span{
@@ -2446,7 +2446,7 @@ a {
     &:nth-child(4){
       .b-product-tabs{
         &:before{
-          background-image: url("../i/section-products/item-cloud4.svg");
+          background-image: url("../i/section-prod/item-cloud4.svg");
         }
         .b-product-tabs__numbers{
           span{
@@ -2510,7 +2510,7 @@ a {
       left: 0;
       right: 0;
       bottom: 0;
-      background: url("../i/section-products/item-cloud1.svg") no-repeat center;
+      background: url("../i/section-prod/item-cloud1.svg") no-repeat center;
       background-size: 100% auto;
       opacity: 0;
       transition: opacity .25s;
@@ -2546,7 +2546,7 @@ a {
     top: 0;
     width: 2.03vw;
     height: 2.53vw;
-    background: url("../i/section-products/i-area.svg") no-repeat center;
+    background: url("../i/section-prod/i-area.svg") no-repeat center;
     background-size: 100% auto;
   }
 
@@ -2863,7 +2863,7 @@ a {
     height: 3.52vw;
     outline: none;
     border: none;
-    background: url("../i/section-products/arrow-left.svg") no-repeat center;
+    background: url("../i/section-prod/arrow-left.svg") no-repeat center;
     background-size: auto 100%;
     transition: transform .25s;
     z-index: 8;
@@ -2969,7 +2969,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("../i/section-products/ico-info.svg") no-repeat center;
+    background: url("../i/section-prod/ico-info.svg") no-repeat center;
     background-size: 100% auto;
     transition: transform .25s;
     z-index: 3;
@@ -2982,7 +2982,7 @@ a {
     z-index: 2;
     width: 18.28vw;
     height: 16.02vw;
-    background: url("../i/section-products/product-popup-bg.svg") no-repeat center;
+    background: url("../i/section-prod/product-popup-bg.svg") no-repeat center;
     background-size: cover;
     opacity: 0;
     visibility: hidden;
@@ -3500,7 +3500,7 @@ a {
   }
 
   .b-section-carousel__title{
-    background-image: url("../i/section-carousel/carousel-title_mob.png");
+    background-image: url("../i/section-carsl/carousel-title_mob.png");
     width: 64vw;
     height: 34.7vw;
     left: 50%;
@@ -3529,7 +3529,7 @@ a {
       font-size: 0;
       line-height: 0;
       color: transparent;
-      background: url("../i/section-carousel/carousel-heroes-arrow.svg") no-repeat center;
+      background: url("../i/section-carsl/carousel-heroes-arrow.svg") no-repeat center;
       background-size: 100% auto;
       z-index: 10;
 
@@ -3552,7 +3552,7 @@ a {
     .b-heroes-carousel__text{
       width: 87.73vw;
       height: 74.4vw;
-      background-image: url("../i/section-carousel/carousel-heroes-cloud_mob.svg");
+      background-image: url("../i/section-carsl/carousel-heroes-cloud_mob.svg");
       left: 50%;
       bottom: auto;
       top: 0;
@@ -3705,7 +3705,7 @@ a {
         width: 33vw;
         height: 63vw;
         bottom: 90%;
-        background-image: url("../i/section-download/text-cloud-3_mob.svg");
+        background-image: url("../i/section-dwnld/text-cloud-3_mob.svg");
         font-size: $fs9_mob;
         line-height: 3.47vw;
 
@@ -4090,7 +4090,7 @@ a {
     .b-section-products__cloud{
       width: 49.87vw;
       height: 36vw;
-      background-image: url("../i/section-products/text-cloud_mob.svg");
+      background-image: url("../i/section-prod/text-cloud_mob.svg");
       font-size: 4.8vw;
       line-height: $fs21_mob;
       right: auto;
@@ -4111,7 +4111,7 @@ a {
     top: auto;
     width: 68.8vw;
     height: 27.2vw;
-    background-image: url("../i/section-products/section-title_mob.png");
+    background-image: url("../i/section-prod/section-title_mob.png");
     margin: 0 auto 29vw;
 
     &:before{
@@ -4210,7 +4210,7 @@ a {
     .slick-arrow{
       width: 9.1vw;
       height: 16vw;
-      background-image: url("../i/section-carousel/carousel-heroes-arrow.svg");
+      background-image: url("../i/section-carsl/carousel-heroes-arrow.svg");
       background-size: 100% auto;
 
 

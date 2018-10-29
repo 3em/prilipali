@@ -339,12 +339,18 @@ $(function () {
     menuBorderHeight();
   });
 
+  var loaderInterval = setInterval(function () {
+    loaderAnimation();
+  }, 1500);
+
   $(window).on('load', function () {
+
     var status = false;
     //defining a 'watcher' for an attribute
     watch(LOADER_PERCENT, "0", function(prop, action, newvalue, oldvalue){
       status = true;
       if (newvalue == 100){
+        clearInterval(loaderInterval);
         scrollTo($body, 0, 0);
         loader();
         getHashToOpenPromoPopup();
@@ -352,6 +358,7 @@ $(function () {
     });
 
     if (LOADER_PERCENT[0] == 100 && !status){
+      clearInterval(loaderInterval);
       scrollTo($body, 0, 0);
       loader();
       getHashToOpenPromoPopup();
@@ -377,7 +384,7 @@ $(function () {
 
     function animateValue(id, start, end, duration) {
 
-      duration = duration + 1500;
+      duration = 1500;
 
       var range = end - start,
         current = start,
@@ -403,7 +410,6 @@ $(function () {
     }
 
   }
-  loaderAnimation();
 
   /**
    * set default region
