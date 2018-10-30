@@ -173,31 +173,24 @@ $(function () {
         data: $shopForm.serialize(),
         dataType: "JSON",
         success: function (data) {
-          data.result === 'ok' ? showSuccessShops() : showErrorShops();
+          data.result === 'ok' ? showSuccessShops(data.gocodeName, data.shopsArr) : showErrorShops();
         },
         error: function () {
-          showSuccessShops();
+          showErrorShops();
         }
       });
     }
   });
 
-  function showSuccessShops() {
+  function showSuccessShops(gocodeNameNew, shopsArrNew) {
     shopsArr = [];
     points = {};
     geoObjects = [];
-    gocodeName = "Россия, Санкт-Петербург";
-    shopsArr = [{
-      "id": 5,
-      "longitude":"59.84731775838757",
-      "altitude": "30.031802499999955",
-      "time": "12:00 - 14:00",
-      "phone": "+7 (495) 150-35-55",
-      "label": "Россия, Санкт-Петербург, Петродворцовый район, посёлок Стрельна"
-    }];
+    gocodeName = gocodeNameNew;
+    shopsArr = shopsArrNew;
+
     myMap.destroy();
     initMap();
-
     $inputAddress.autocomplete( "option", "source", shopsArr );
   }
 

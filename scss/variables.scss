@@ -1,11 +1,8 @@
-//$DigitalStripCyrillic: 'DigitalStripCyrillic';
 $FirenightRegular: 'Firenight-Regular';
 $OutofLineBB: 'OutofLineBB';
 $OutofLineBB_bold: 'OutofLineBB-bold';
 $OutofLineBBitalicBold: 'OutofLineBB-italicBold';
 $OutofLineBB_italic: 'OutofLineBB-italic';
-
-$minWidth: 1200px;
 
 $sectionHeight: 35.15625vw;
 $inputsHeight: 2.34375vw + 0.3125vw * 2;
@@ -33,10 +30,8 @@ $fs21_mob: 5.6vw;
 $lh24_mob: 6.4vw;
 $lh30_mob: 8vw;
 
-
 $regularFS: 1.09375vw;
 $regularFLH: 1.797vw;
-$smallFS: 13px;
 
 $wrapperVal: 2.5%;
 $wrapperValMob: 4%;
@@ -47,14 +42,6 @@ $redColor: #d8171e;
 $redColor2: #ed1b23;
 $pinkColor: #ffcdb9;
 $overlayBG: rgba(40,38,41, .95);
-
-
-$greyColor: rgba(0,0,0, .4);
-$borderColor: rgba(0,0,0, .1);
-$linkColor: #FF4141;
-$linkColorHover: rgba(255,65,65, .8);
-
-
 
 // placeholder
 @mixin placeholder ($color, $ff, $selector, $lh)

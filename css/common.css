@@ -289,8 +289,6 @@ a:active, a:focus, button:active, button:focus {
     border-bottom-right-radius: 0; }
     .b-dropdown.b-dropdown_open .b-dropdown__arrow {
       transform: translate(0, -50%) rotate(180deg); }
-    .b-dropdown.b-dropdown_open .b-dropdown__item.active {
-      color: #FF4141; }
     .b-dropdown.b-dropdown_open .b-dropdown__text {
       color: #aba0a0; }
     .b-dropdown.b-dropdown_open.first-open .b-dropdown__sub {
@@ -1457,7 +1455,7 @@ a {
   font-size: 0;
   line-height: 0;
   width: 22.266vw;
-  height: 8.95vw;
+  height: 8.2vw;
   background: url("../i/map-title.png") no-repeat;
   background-size: 100% auto;
   position: absolute;
@@ -1613,7 +1611,8 @@ a {
     transform: scale(0.57);
     transform-origin: center bottom;
     transition: .35s;
-    z-index: 1; }
+    z-index: 1;
+    cursor: pointer; }
     .b-heroes-carousel__item .b-heroes-carousel__pic img {
       position: absolute;
       top: 0;
@@ -2153,14 +2152,15 @@ a {
 
 .b-footer__logo {
   width: 21.95vw;
-  height: 10.23vw;
+  height: 10.25vw;
   position: absolute;
   left: 50%;
   top: 1.09vw;
   transform: translate(-50%, 0);
   background: url("../i/product-logo.svg") no-repeat center;
   background-size: 100% auto;
-  margin-left: 1.4vw; }
+  margin-left: 1.4vw;
+  z-index: 4; }
 
 .b-footer__text {
   position: absolute;
@@ -2668,13 +2668,13 @@ a {
     overflow: hidden;
     text-overflow: ellipsis; }
   .b-products .b-products__text {
-    padding: 1vw 1vw 0;
+    padding: 1vw 2vw 0;
     position: relative; }
   .b-products .b-products__faq {
     position: absolute;
     width: 2.03vw;
     height: 2.03vw;
-    right: 1vw;
+    right: .4vw;
     top: .3vw;
     z-index: 2; }
   .b-products .b-products__faq-icon {
@@ -2708,10 +2708,7 @@ a {
       overflow: hidden; }
       .b-products .b-products__faq-text .b-products__faq-text-wrapper h6 {
         font-family: "OutofLineBB-bold";
-        font-weight: bold;
-        font-size: 1.40625vw;
-        line-height: 1.875vw;
-        margin-bottom: .3vw; }
+        font-weight: bold; }
 
 .b-input::-webkit-input-placeholder {
   color: rgba(41, 39, 39, 0.5);
@@ -2767,9 +2764,10 @@ a {
     body.regular .b-section-top__hero.b-section-top__hero_1 {
       transform: rotateY(180deg); }
     body.show .b-section-top__bg {
-      background-position: 90% 65.5%; }
+      background-position: 90% 78.5%; }
     body.show .b-section-top__buildings div {
-      background-position: 90% 38%; }
+      background-position: 90% 38%;
+      transform: none !important; }
     body.show .b-section-top__hero.b-section-top__hero_1 {
       animation: hero1Move_mob 2s ease 1 forwards;
       animation-delay: .6s; }
@@ -2822,7 +2820,7 @@ a {
     left: 0 !important;
     right: 0;
     bottom: 0;
-    background-position: 90% 40%;
+    background-position: 90% 53%;
     background-size: 205% auto;
     transform: none !important; }
 
@@ -2883,9 +2881,9 @@ a {
       left: 54%; }
   .b-section-top__hero.b-section-top__hero_5 {
     right: -4%;
-    bottom: 4%;
+    bottom: 2%;
     width: 17.55vw;
-    height: 23vw; }
+    height: 27.5vw; }
     .b-section-top__hero.b-section-top__hero_5 .b-section-top__hero-cloud {
       width: 19.95vw;
       height: 22.34vw;
@@ -3083,7 +3081,7 @@ a {
 
   .b-shops-choose__title {
     width: 63vw;
-    height: 25vw;
+    height: 25.2vw;
     margin-bottom: -5vw;
     background-image: url("../i/map-title_ mob.png"); }
 
@@ -3567,7 +3565,6 @@ a {
     top: auto;
     width: 68.8vw;
     height: 27.2vw;
-    background-image: url("../i/section-prod/section-title_mob.png");
     margin: 0 auto 29vw; }
     .b-section-products__title:before {
       display: none; }
