@@ -332,7 +332,7 @@ $(function () {
           visible: true,
           baloon: false,
           placemark: new ymaps.Placemark([data.longitude, data.altitude],
-            {name: data.id, time: data.time, phone: data.phone, address: data.label},
+            {name: data.id, time: data.time, phone: data.phone, address: data.label, longitude: data.longitude, altitude: data.altitude},
             {
               iconLayout: 'default#imageWithContent',
               iconImageHref: './i/i-map-point.svg',
@@ -378,6 +378,11 @@ $(function () {
 
           myMap.behaviors.disable('scrollZoom');
 
+          if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            //... отключаем перетаскивание карты
+            myMap.behaviors.disable('drag');
+          }
+
           var MyIconContentLayout = ymaps.templateLayoutFactory
             .createClass('<div style="color: #FFFFFF; text-align: center; font-family: GothamPro-Black; font-size: 18px; line-height: 49px; vertical-align: top;">$[properties.geoObjects.length]</div>');
 
@@ -419,7 +424,12 @@ $(function () {
     var id = placemark.properties.get('name');
     var time = placemark.properties.get('time');
     var address = placemark.properties.get('address');
+    var longitude = placemark.properties.get('longitude');
+    var altitude = placemark.properties.get('altitude');
     placemark.properties.set('balloonContent', '<p><span>Адрес:</span>'+address+'</p><p><span>Время работы:</span>'+time+'</p>');
+
+    myMap.setZoom(16);
+    myMap.setCenter([longitude, altitude]);
   }
 
   /**
